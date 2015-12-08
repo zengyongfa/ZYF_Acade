@@ -1,0 +1,1477 @@
+﻿; 27-Jan-11 t_kudam; added 4 items into Time relays and 2 items into Pressure switches
+; 01-Dec-09 t_kalio; menu item VXF1T30.dwg removed from M1631 submenu - due to DID949986
+; 05-Mar-09 t_kudam; menu labels corrected in m116 submenu
+; 05-Mar-09 t_kudam; symbol menu command updated in M20 submenu
+; 11-Feb-09 t_kudam; menu item (?CN1PJ1.dwg and ?CN1JP1.dwg) disabled - due to DID1198084
+; 29-Oct-08 t_gackt; One line menu - Changed string "Square (Round) with terminal number" to "Square (Round) terminal" and added second transformer
+; 21-Oct-08 t_gackt; added new menu "One line component"
+; 27-Sep-07 t_gackt; added illuminated pushbutton "lamps"
+; 7-Aug-07 t_gackt; Re-arrange menu in the file from top to bottom, like "**M0", "**M1", "**M2" ...
+; 13-Nov-06 Kulas inserted format information for old insert menu
+; 09-Oct-06 Kulas Rearranged for modern icon menu
+; 07-Mar-06 NEHolt; changed menu M26 to use "" instead of "D3"
+; 18-Jan-06 t_kudam; CB items renamed
+; 09-Jan-06 t_kudam: menu reorganized (new submenus + slides)
+; 05-Jan-06 NEHolt; added Latch relay (child coil) - VLR2
+; 17-Dec-05 NEHolt; added param twisted-pair to *M30
+; 13-Dec-05 t_kudam: added cca 350 menu items plus equivalent symbols
+; 11-Dec-05 NEHolt added parametric twisted-pair symbol
+; 06-Nov-05 NEHolt separate off-delay timer "instantaneous" contact symbols
+; 23-Oct-05 NEHolt simplified M48
+; 21-Oct-05 Mani added sub menu page M48 for Splice symbols
+; 19-Oct-05 Mani added parametric connector build calls - 2 places
+; 26-Jan-05 NEHolt - added 2-pin plug/jack connector references
+; 25-June-04 MJ - Changed string PLc-Direct to Automation-Direct
+; 25-June-04 MJ - Corrected reactor 3 phase symbol, by making it use the "3-unit" code
+; 12-APR-04 MJ - Added Symbols to IEC Library and updated the .dat file
+; 29-Mar-04 JDZ - modified the Title Lines for localization
+; 09-Jan-04 JDZ Replaced Abbreviations with full word; ready for globalization
+; 13-Jan-03 NEHolt added PLC fixed unit references M33-M39
+; 14-Dec-01 MSulit/NEHolt "user circ" section had a typo on each entry. Ex:"%WD_USER%circ1)"
+;    should be just "%WD_USER%circ1"
+; 30-Dec-00 NEHolt clean-up
+**M0
+D0
+GB: 原理图符号
+按钮|ace_gb(s_pb)|$S=M3
+选择开关|ace_gb(s_ss)|$S=M6
+断路器/隔离开关|ace_gb(s_cb_ds)|$S=M13
+熔断器/变压器/电抗器|ace_gb(s_fu_xf)|$S=M16
+继电器/触点|ace_gb(s_cr)|$S=M1
+定时器|ace_gb(s_td)|$S=M2
+电动机控制|ace_gb(s_mcc)|$S=M15
+指示灯|ace_gb(s_lt)|$S=M4
+PLC I/O|ace_gb(s_io)|$S=M27
+端子/连接器|ace_gb(s_trm_cn)|$S=M14
+限位开关|ace_gb(s_zs)|$S=M8
+压力/热敏开关|ace_gb(s_ps_ts)|$S=M9
+接近开关|ace_gb(s_px)|$S=M7
+其他开关|ace_gb(s_msc_sw)|$S=M10
+螺线管|ace_gb(s_sv)|$S=M24
+仪表|ace_gb(s_inst)|$S=M25
+限定符号|ace_gb(s_qualif)|$S=M31
+其他|ace_gb(s_msc)|$S=M18
+节点|ace_gb(shdot)|$C=wd_repeat WDDOT
+单线元件|ace_gb(s_oneline)|$S=M100
+ZYF_Acade_Library|IMAGES\ZYF_Acade_Library.png|$S=M108
+**M1
+D6W
+GB: 继电器和触点
+继电器常开触点|ace_gb(CR21)|VCR21
+继电器常闭触点|ace_gb(CR22)|VCR22
+先断后合的转换触点|ace_gb(CR23R)|VCR23R
+翻转的先断后合的转换触点|ace_gb(CR23)|VCR23
+继电器线圈|ace_gb(CR1)|VCR1
+带闭锁装置的继电器线圈|ace_gb(LR1L)|VLR1
+闭锁式继电器 (辅线圈)|ace_gb(lr12)|VLR2
+固态|ace_gb(CR1SSD)|VCR1SSD
+高速|ace_gb(CR1HSP)|VCR1HSP
+交流不受影响|ace_gb(CR1ACU)|VCR1ACU
+交流|ace_gb(CR1AC)|VCR1AC
+已极化|ace_gb(CR1POL)|VCR1POL
+正在测量|ace_gb(CR1MSR)|VCR1MSR
+带机械块和手动拔销|ace_gb(VCR1NA21F)|VCR2121F
+有自锁功能|ace_gb(VCR1NA22F)|VCR2122F
+定时触点|ace_gb(VCR1NA7F)|VCR217F
+延时触点|ace_gb(VCR1NA8F)|VCR218F
+带机械块和手动拔销|ace_gb(VCR1NC21F)|VCR2221F
+有自锁功能|ace_gb(VCR1NC22F)|VCR2222F
+定时触点|ace_gb(VCR1NC8F)|VCR227F
+延时触点|ace_gb(VCR1NC9F)|VCR228F
+电磁保护|ace_gb(VCR1F34)|VCR1F34
+带干扰抑制器的继电器|ace_gb(VCR1K33_MENU)|$S=M116
+电流保护|ace_gb(iec_current_p)|$S=M111
+电压保护|ace_gb(iec_voltage_p)|$S=M112
+计数器继电器|ace_gb(CR1CNN_MENU)|$S=M117
+其他继电器|ace_gb(VCR1K11_MENU)|$S=M113
+**M10
+D6W
+GB: 其他开关
+通用开关，常开触点|ace_gb(sw11)|VSW11
+通用开关，常闭触点|ace_gb(sw12)|VSW12
+液位开关，常开触点|ace_gb(FL11)|VFL11
+液位开关，常闭触点|ace_gb(FL12)|VFL12
+电键开关，常开触点|ace_gb(VPB11KS)|VPB11KS
+电键开关，常闭触点|ace_gb(VPB12KS)|VPB12KS
+销式电键开关，常开触点|ace_gb(VPB11KSL)|VPB11KSL
+销式电键开关，常闭触点|ace_gb(VPB12KSL)|VPB12KSL
+拉拔开关，常开触点|ace_gb(pc11)|VPC11
+拉拔开关，常闭触点|ace_gb(pc12)|VPC12
+有自锁功能的拉拔开关，常开|ace_gb(pc11L)|VPC11L
+有自锁功能的拉拔开关，常闭|ace_gb(pc12L)|VPC12L
+脚踏式开关，常开触点|ace_gb(ft11)|VFT11
+脚踏式开关，常闭触点|ace_gb(ft12)|VFT12
+销式脚踏开关，常开触点|ace_gb(ft11L)|VFT11L
+销式脚踏开关，常闭触点|ace_gb(ft12L)|VFT12L
+杠杆开关，常开触点|ace_gb(PB11LS)|VPB11LS
+杠杆开关，常闭触点|ace_gb(PB12LS)|VPB12LS
+销式杠杆开关，常开触点|ace_gb(PB11LSL)|VPB11LSL
+销式杠杆开关，常闭触点|ace_gb(PB12LSL)|VPB12LSL
+流体控制开关，常开|ace_gb(FS11)|VFS11
+流体控制开关，常闭|ace_gb(FS12)|VFS12
+流体控制开关，常开 - 气体|ace_gb(VFS1S20)|VFS11S20
+流体控制开关，常闭 - 气体|ace_gb(VFS1S20C)|VFS12S20
+三相电压转换开关|ace_gb(VSW1S90)|VSW1S90
+三相相-零电压转换开关|ace_gb(VSW1S91)|VSW1S91
+三相相-相，相-零电压转换开关|ace_gb(VSW1S92)|VSW1S92
+双网络三相相间电压转换开关|ace_gb(VSW1S93)|VSW1S93
+3 个测量点的电流开关|ace_gb(VSW1S94)|VSW1S94
+4 个测量点的电流开关|ace_gb(VSW1S95)|VSW1S95
+带机械块和手动拔销的转换触点|ace_gb(VSW1SC21_F)|VSW1SC21_F
+先合后断式触点|ace_gb(VSW1SC7_F)|VSW1SC7_F
+电压转接器|ace_gb(VSW1S53)|VSW1S53
+多极常开触点|ace_gb(2plusNO)|VSW21
+多极常闭触点|ace_gb(2plusNC)|VSW22
+**M100
+GB: 单线元件
+连接器|ace_gb(s_conn)|$S=M101
+电动机控制|ace_gb(s_mot_con)|$S=M102
+变压器|ace_gb(s_transf)|$S=M103
+端子|ace_gb(s_term)|$S=M104
+电缆标记|ace_gb(s_cmark)|$S=M105
+节点|ace_gb(s_BusTap)|$S=M106
+其他|ace_gb(s_misc)|$S=M107
+**M101
+GB: 连接器
+插座/插头|ace_gb(shc01pj)|Hc01pj_1-
+**M102
+GB: 电动机控制
+断路器|ace_gb(shcb1)|Hcb11_1-
+电动机回路防护器|ace_gb(shcb1m)|Hcb11m_1-
+带热保护的断路器|ace_gb(shcb1th)|Hcb11th_1-
+隔离开关|ace_gb(shds1)|Hds11_1-
+带熔断器的隔离开关|ace_gb(shds1f)|Hds11f_1-
+熔断器|ace_gb(shfu1)|Hfu1_1-
+电动机|ace_gb(SHMO1)|Hmo13_1-
+电动机起动器|ace_gb(shmt21)|Hms11_1-
+过载|ace_gb(shol1)|Hol1_1-
+纵立电容器|ace_gb(svca113)|Vca113_1-
+**M103
+GB: 变压器
+变压器 1|ace_gb(shxf1)|Hxf1T1_1-
+变压器 2|ace_gb(shxf2_2)|Hxf1T2_1-
+**M104
+GB: 端子
+正方形端子|ace_gb(sht0_01)|Ht0001_1-
+圆形端子|ace_gb(sht0_02)|Ht0002_1-
+**M105
+GB: 电缆标记
+电缆标记|ace_gb(shw01)|HW01_1-
+**M106
+GB: 节点
+节点 - 主/节点|ace_gb(svdv1bt1)|VDV1_BT_1-
+节点 - 双/T 形|ace_gb(svdv1btt1)|VDV1_BTT_1-
+节点 - 双/角点|ace_gb(svdv1btl1)|VDV1_BTL_1-
+**M107
+GB: 其他
+电源插座|ace_gb(shc01wr)|Hc01wr_1-
+一般负荷|ace_gb(shdv11)|Hdv1_1-
+**M108
+ZYF_Acade_Library
+变压器/电抗器/互感器|IMAGES\VXF1_变压器001.png|$S=M109
+开关|IMAGES\VCR21_动合触点001.png|$S=M110
+熔断器/避雷器|IMAGES\VFU1_熔断器001.png|$S=M114
+符号|IMAGES\VDV1_电缆标记001_1.png|$S=M115
+**M109
+变压器/电抗器/互感器
+变压器001|IMAGES\VXF1_变压器001.png|D:\Documents\Acade 2016\ZYF_Acade_Library\Libs\VXF1_变压器001.dwg
+变压器002|IMAGES\VXF1_变压器002.png|D:\Documents\Acade 2016\ZYF_Acade_Library\Libs\VXF1_变压器002.dwg
+变压器003|IMAGES\VXF1_变压器003.png|D:\Documents\Acade 2016\ZYF_Acade_Library\Libs\VXF1_变压器003.dwg
+变压器004|IMAGES\VXF1_变压器004.png|D:\Documents\Acade 2016\ZYF_Acade_Library\Libs\VXF1_变压器004.dwg
+电抗器001|IMAGES\VDV1_电抗器001.png|D:\Documents\Acade 2016\ZYF_Acade_Library\Libs\VDV1_电抗器001.dwg
+互感器001|IMAGES\VDV1_互感器001.png|D:\Documents\Acade 2016\ZYF_Acade_Library\Libs\VDV1_互感器001.dwg
+互感器002|IMAGES\VDV1_互感器002.png|D:\Documents\Acade 2016\ZYF_Acade_Library\Libs\VDV1_互感器002.dwg
+互感器003|IMAGES\VDV1_互感器003.png|D:\Documents\Acade 2016\ZYF_Acade_Library\Libs\VDV1_互感器003.dwg
+互感器003_1|IMAGES\HDV1_互感器003_1.png|D:\Documents\Acade 2016\ZYF_Acade\Libs\HDV1_互感器003_1.dwg
+互感器003_2|IMAGES\HDV1_互感器003_2.png|D:\Documents\Acade 2016\ZYF_Acade\Libs\HDV1_互感器003_2.dwg
+互感器004|IMAGES\VDV1_互感器004.png|D:\Documents\Acade 2016\ZYF_Acade_Library\Libs\VDV1_互感器004.dwg
+互感器005|IMAGES\VDV1_互感器005.png|D:\Documents\Acade 2016\ZYF_Acade\Libs\VDV1_互感器005.dwg
+**M110
+开关
+动合触点001|IMAGES\VCR21_动合触点001.png|VCR21_动合触点001
+动断触点001|IMAGES\VCR22_动断触点001.png|VCR22_动断触点001
+隔离开关001|IMAGES\VDS1_隔离开关001.png|D:\Documents\Acade 2016\ZYF_Acade_Library\Libs\VDS1_隔离开关001.dwg
+断路器001|IMAGES\VCB1_断路器001.png|D:\Documents\Acade 2016\ZYF_Acade_Library\Libs\VCB1_断路器001.dwg
+熔断器式开关001|IMAGES\VDV1_熔断器式开关001.png|VDV1_熔断器式开关001
+熔断器式隔离开关001|IMAGES\VDV1_熔断器式隔离开关001.png|VDV1_熔断器式隔离开关001
+负荷开关001|IMAGES\VDS1_负荷开关001.png|VDS1_负荷开关001
+**M111
+D4W
+GB: 电流保护继电器
+回流保护|ace_gb(VCR1F28)|VCR1F28
+差动电流保护|ace_gb(VCR1F29)|VCR1F29
+差动电流保护 - 相对值|ace_gb(VCR1F30)|VCR1F30
+最大电流保护|ace_gb(VCR1F25)|VCR1F25
+最小电流保护|ace_gb(VCR1F26)|VCR1F26
+最小电流和最大电流保护|ace_gb(VCR1F27)|VCR1F27
+在中性档位|ace_gb(VCR1F32)|VCR1F32
+在 2 个多相系统之间的中性档位|ace_gb(VCR1F33)|VCR1F33
+接地故障电流保护|ace_gb(VCR1F37)|VCR1F37
+**M112
+D3W
+GB: 电压保护继电器
+最小电压保护|ace_gb(VCR1F35)|VCR1F35
+最大电压保护|ace_gb(VCR1F36)|VCR1F36
+残余电压保护|ace_gb(VCR1F38)|VCR1F38
+接地故障电压保护|ace_gb(VCR1F31)|VCR1F31
+欠压保护|ace_gb(VCR1F39)|VCR1F39
+**M113
+D2W
+GB: 其他继电器
+频率继电器|ace_gb(VCR1F40)|VCR1F40
+最小阻抗继电器|ace_gb(VCR1F41)|VCR1F41
+感应三相系统中缺相的继电器|ace_gb(VCR1F42)|VCR1F42
+最小有功功率继电器|ace_gb(VCR1F43)|VCR1F43
+绝缘继电器|ace_gb(VCR1F44)|VCR1F44
+快速继电器线圈|ace_gb(VCR1K1)|VCR1K1
+机械共振继电器|ace_gb(VCR1K11)|VCR1K11
+**M114
+熔断器/避雷器
+熔断器001|IMAGES\VFU1_熔断器001.png|D:\Documents\Acade 2016\ZYF_Acade_Library\Libs\VFU1_熔断器001.dwg
+避雷器001|IMAGES\VDV1_避雷器001.png|D:\Documents\Acade 2016\ZYF_Acade_Library\Libs\VDV1_避雷器001.dwg
+**M115
+符号
+电缆标记001_1|IMAGES\VDV1_电缆标记001_1.png|VDV1_电缆标记001_1
+电缆标记001_2|IMAGES\VDV1_电缆标记001_2.png|VDV1_电缆标记001_2
+接地001|IMAGES\VGND2_接地001.png|VGND2_接地001
+箭头001_1|IMAGES\VDV1_箭头001_1.png|VDV1_箭头001_1
+箭头001_2|IMAGES\VDV1_箭头001_2.png|VDV1_箭头001_2
+**M116
+D2W
+GB: 带干扰抑制器的继电器
+带集成块二极管的继电器|ace_gb(VCR1K33)|VCR1K33
+带集成块二极管和集成 LED 的继电器|ace_gb(VCR1K35)|VCR1K35
+带电容器的继电器|ace_gb(VCR1K37)|VCR1K37
+带电阻-电容回路的继电器|ace_gb(VCR1K39)|VCR1K39
+**M117
+D2W
+GB: 计数器继电器
+脉冲计(电动计数装置)|ace_gb(CR1CNN)|VCR1CNN
+手动预设 n 脉冲计(若 n=0 则重置)|ace_gb(CR1CNM)|VCR1CNM
+电动复零脉冲计|ace_gb(CR1CNE)|VCR1CNE
+**M13
+D4W
+GB: 断开方式
+单极断路器|ace_gb(cb1pole)|$S=M131
+双极断路器|ace_gb(cb2pole)|$S=M132
+三极断路器|ace_gb(cb3pole)|$S=M133
+多极断路器|ace_gb(cb22pole)|$S=M134
+电源开关|ace_gb(power)|$S=M137
+带熔断器的隔离开关|ace_gb(s_fds)|$S=M46
+单极隔离开关|ace_gb(disconnect1)|$S=M138
+双极隔离开关|ace_gb(disconnect2)|$S=M139
+三极隔离开关|ace_gb(disconnect3)|$S=M140
+**M131
+D5W
+GB: 单极断路器
+断路器|ace_gb(CB1)|VCB1
+带热保护的断路器|ace_gb(CB11TH)|VCB11TH
+限流/热保护|ace_gb(CB11THi)|VCB11THi
+带电磁/热保护的断路器|ace_gb(VCB1Q9)|VCB11Q9
+带电磁/热保护的差动断路器|ace_gb(VCB1Q13)|VCB11Q13
+差动断路器|ace_gb(VCB1Q17)|VCB11Q17
+带过流保护|ace_gb(VCB1Q29)|VCB11Q29
+带过流保护和欠压保护|ace_gb(VCB1Q33)|VCB11Q33
+带最大电流保护和最小电压保护|ace_gb(VCB1Q37)|VCB11Q37
+带过热/过流保护和最小电压保护|ace_gb(VCB1Q41)|VCB11Q41
+带过热保护和最小电压保护|ace_gb(VCB1Q45)|VCB11Q45
+带过热保护和过流保护|ace_gb(VCB1Q21)|VCB11Q21
+带过热保护和差动保护|ace_gb(VCB1Q25)|VCB11Q25
+带电磁的单极自动开关|ace_gb(VCB1Q146)|VCB11Q146
+单极自动电磁-热控开关/隔离开关|ace_gb(VCB1Q134)|VCB11Q134
+带电子继电器的单极自动隔离开关|ace_gb(VCB1Q138)|VCB11Q138
+**M132
+D5W
+GB: 双极断路器
+断路器|ace_gb(CB1p2)|$C=wd_2unit VCB1
+带热保护的断路器|ace_gb(CB1p2th)|$C=wd_2unit VCB11TH
+限流/热保护|ace_gb(CB1p2thi)|$C=wd_2unit VCB11THi
+带电磁/热保护的断路器|ace_gb(VCB2Q9)|$C=wd_2unit VCB11Q9
+带电磁/热保护的差动断路器|ace_gb(VCB2Q13)|$C=wd_2unit VCB11Q13
+差动断路器|ace_gb(VCB2Q17)|$C=wd_2unit VCB11Q17
+带过流保护|ace_gb(VCB2Q29)|$C=wd_2unit VCB11Q29
+带过流保护和欠压保护|ace_gb(VCB2Q33)|$C=wd_2unit VCB11Q33
+带最大电流保护和最小电压保护|ace_gb(VCB2Q37)|$C=wd_2unit VCB11Q37
+带过热/过流保护和最小电压保护|ace_gb(VCB2Q41)|$C=wd_2unit VCB11Q41
+带过热保护和最小电压保护|ace_gb(VCB2Q45)|$C=wd_2unit VCB11Q45
+带过热保护和差动保护|ace_gb(VCB2Q25)|$C=wd_2unit VCB11Q25
+带电磁的双极自动开关|ace_gb(VCB2Q146_2)|$C=wd_2unit VCB11Q146
+双极自动电磁-热控开关/隔离开关|ace_gb(VCB2Q134_2)|$C=wd_2unit VCB11Q134
+带电子继电器的双极自动隔离开关|ace_gb(VCB2Q138_2)|$C=wd_2unit VCB11Q138
+**M133
+D5W
+GB: 三极断路器
+断路器|ace_gb(CB1p3)|$C=wd_3unit VCB1
+带热保护的断路器|ace_gb(CB1p3th)|$C=wd_3unit VCB11TH
+限流/热保护|ace_gb(CB1p3thi)|$C=wd_3unit VCB11THi
+带电磁/热保护的断路器|ace_gb(VCB3Q9)|$C=wd_3unit VCB11Q9
+带电磁/热保护的差动断路器|ace_gb(VCB3Q13)|$C=wd_3unit VCB11Q13
+差动断路器|ace_gb(VCB3Q17)|$C=wd_3unit VCB11Q17
+带过流保护|ace_gb(VCB3Q29)|$C=wd_3unit VCB11Q29
+带过流保护和欠压保护|ace_gb(VCB3Q33)|$C=wd_3unit VCB11Q33
+带最大电流保护和最小电压保护|ace_gb(VCB3Q37)|$C=wd_3unit VCB11Q37
+带过热/过流保护和最小电压保护|ace_gb(VCB3Q41)|$C=wd_3unit VCB11Q41
+带过热保护和最小电压保护|ace_gb(VCB3Q45)|$C=wd_3unit VCB11Q45
+带电磁的三极自动开关|ace_gb(VCB2Q146_3)|$C=wd_3unit VCB11Q146
+三极自动电磁-热控开关/隔离开关|ace_gb(VCB2Q134_3)|$C=wd_3unit VCB11Q134
+带电子继电器的三极自动隔离开关|ace_gb(VCB2Q138_3)|$C=wd_3unit VCB11Q138
+**M134
+D6W
+GB: 多极断路器
+多极断路器|ace_gb(CB2)|VCB2
+带热保护的多极断路器|ace_gb(CB21TH)|VCB21TH
+限流/带热保护的多极断路器|ace_gb(CB21THi)|VCB21THi
+多极隔离开关|ace_gb(DS21)|VDS21
+带常开辅助触点的隔离开关|ace_gb(FU21)|VDS21AUX
+带常闭辅助触点的隔离开关|ace_gb(FU22)|VDS22AUX
+自动复位|ace_gb(VCB1NA20F)|VCB2120F
+带机械块和手动拔销|ace_gb(VCB1NA21F)|VCB2121F
+有自锁功能|ace_gb(VCB1NA22F)|VCB2122F
+定时触点|ace_gb(VCB1NA7F)|VCB217F
+延时触点|ace_gb(VCB1NA8F)|VCB218F
+带常开辅助触点的断路器|ace_gb(CB21)|VCB21
+带常闭辅助触点的断路器|ace_gb(CB22)|VCB22
+自动复位|ace_gb(VCB1NC20F)|VCB2220F
+带机械块和手动拔销|ace_gb(VCB1NC21F)|VCB2221F
+有自锁功能|ace_gb(VCB1NC22F)|VCB2222F
+定时触点|ace_gb(VCB1NC8F)|VCB227F
+延时触点|ace_gb(VCB1NC9F)|VCB228F
+双极电磁-热控开关，单极受保护|ace_gb(VCB1Q142)|VCB1Q142
+四极电磁-热控开关，三极受保护|ace_gb(VCB1Q143)|VCB1Q143
+双极差动电磁-热控开关，单极受保护|ace_gb(VCB1Q144)|VCB1Q144
+四极差动电磁-热控开关，三极受保护|ace_gb(VCB1Q145)|VCB1Q145
+带熔断器的三极双向隔离开关|ace_gb(VDS1Q93)|VDS1Q93
+**M137
+D3W
+GB: 电源开关
+带半导体的单极电源开关|ace_gb(VCB1Q53)|VCB11Q53
+带半导体的双极电源开关|ace_gb(VCB2Q53)|$C=wd_2unit VCB11Q53
+带半导体的三极电源开关|ace_gb(VCB3Q53)|$C=wd_3unit VCB11Q53
+带半导体的单极电源开关 - 单向|ace_gb(VCB1Q57)|VCB11Q57
+带半导体的双极电源开关 - 单向|ace_gb(VCB2Q57)|$C=wd_2unit VCB11Q57
+带半导体的三极电源开关 - 单向|ace_gb(VCB3Q57)|$C=wd_3unit VCB11Q57
+双相电源开关|ace_gb(VCB2Q50)|$C=wd_2unit VCB11Q50
+**M138
+D3W
+GB: 单极隔离开关
+单极隔离开关|ace_gb(VDS1Q65)|VDS11Q65
+不带熔断器的单极隔离开关|ace_gb(DS11)|VDS11
+带熔断器的操作开关|ace_gb(VDS1Q119)|VDS11Q119
+PE 接地开关|ace_gb(VDS1Q123)|VDS11Q123
+电源自动开关/隔离开关|ace_gb(VDS1Q5)|VDS11Q5
+操作开关/隔离开关|ace_gb(VDS1Q69)|VDS11Q69
+带锁装置的隔离开关|ace_gb(VDS1Q73)|VDS11Q73
+带锁装置的开关/隔离开关|ace_gb(VDS1Q77)|VDS11Q77
+三档位双向隔离开关|ace_gb(VDS1Q89)|VDS11Q89
+**M139
+D3W
+GB: 双极隔离开关
+双极隔离开关|ace_gb(VDS2Q65)|$C=wd_2unit VDS11Q65
+不带熔断器的双极隔离开关|ace_gb(DS1p2)|$C=wd_2unit VDS11
+带熔断器的操作开关|ace_gb(VDS2Q119)|$C=wd_2unit VDS11Q119
+PE 接地开关|ace_gb(VDS2Q123)|$C=wd_2unit VDS11Q123
+电源自动开关/隔离开关|ace_gb(VDS2Q5)|$C=wd_2unit VDS11Q5
+操作开关/隔离开关|ace_gb(VDS2Q69)|$C=wd_2unit VDS11Q69
+带锁装置的隔离开关|ace_gb(VDS2Q73)|$C=wd_2unit VDS11Q73
+带锁装置的开关/隔离开关|ace_gb(VDS2Q77)|$C=wd_2unit VDS11Q77
+三档位双向隔离开关|ace_gb(VDS2Q89)|$C=wd_2unit VDS11Q89
+**M14
+D6W
+GB: 端子和连接器
+正方形端子|ace_gb(ht0_01)|HT0_01
+带线号的正方形端子|ace_gb(sht0w01)|HT0W01
+带端子号的正方形端子|ace_gb(sht0001)|HT0001
+改变了线号的正方形端子|ace_gb(sht1001)|HT1001
+圆形端子|ace_gb(ht0_02)|HT0_02
+带线号的圆形端子|ace_gb(sht0w02)|HT0W02
+带端子号的圆形端子|ace_gb(sht0002)|HT0002
+改变了线号的圆形端子|ace_gb(sht1002)|HT1002
+六边形端子|ace_gb(ht0_03)|HT0_03
+带线号的六边形端子|ace_gb(sht0w03)|HT0W03
+带端子号的六边形端子|ace_gb(sht0003)|HT0003
+改变了线号的六边形端子|ace_gb(sht1003)|HT1003
+菱形端子|ace_gb(ht0_04)|HT0_04
+带线号的菱形端子|ace_gb(sht0w04)|HT0W04
+带端子号的菱形端子|ace_gb(sht0004)|HT0004
+改变了线号的菱形端子|ace_gb(sht1004)|HT1004
+三角形端子|ace_gb(ht0_05)|HT0_05
+带线号的三角形端子|ace_gb(sht0w05)|HT0W05
+带端子号的三角形端子|ace_gb(sht0005)|HT0005
+改变了线号的三角形端子|ace_gb(sht1005)|HT1005
+导线内导线标签|ace_gb(dumb_red)|$S=M32
+电源分配模块|ace_gb(pdb)|$S=M45
+连接器 - 无线号更改|ace_gb(s_cn_nch)|$S=M22
+连接器 - 线号更改|ace_gb(s_cn_chg)|$S=M21
+**M140
+D3W
+GB: 三极隔离开关
+三极隔离开关|ace_gb(VDS3Q65)|$C=wd_3unit VDS11Q65
+不带熔断器的三极隔离开关|ace_gb(DS1p3)|$C=wd_3unit VDS11
+带熔断器的操作开关|ace_gb(VDS3Q119)|$C=wd_3unit VDS11Q119
+PE 接地开关|ace_gb(VDS3Q123)|$C=wd_3unit VDS11Q123
+电源自动开关/隔离开关|ace_gb(VDS3Q5)|$C=wd_3unit VDS11Q5
+操作开关/隔离开关|ace_gb(VDS3Q69)|$C=wd_3unit VDS11Q69
+带锁装置的隔离开关|ace_gb(VDS3Q73)|$C=wd_3unit VDS11Q73
+带锁装置的开关/隔离开关|ace_gb(VDS3Q77)|$C=wd_3unit VDS11Q77
+三档位双向隔离开关|ace_gb(VDS3Q89)|$C=wd_3unit VDS11Q89
+**M15
+D4W
+GB: 电动机控制
+单相电动机|ace_gb(MO12_MENU)|$S=M1500
+三相电动机|ace_gb(mo13_MENU)|$S=M1501
+直流电动机|ace_gb(dc_motor)|$S=M1502
+发电机|ace_gb(generator)|$S=M1503
+电动机起动器|ace_gb(starter)|$S=M1504
+单极过载|ace_gb(ol1)|VOL1
+三极过载|ace_gb(ol3)|$C=wd_3unit VOL1
+多极过载|ace_gb(ol2)|VOL2
+多极过载，常开触点|ace_gb(OL21)|VOL21
+多极过载，常闭触点|ace_gb(OL22)|VOL22
+三相千乏电容器|ace_gb(CA113)|VCA113
+**M1500
+D3W
+GB: 单相电动机
+单相电动机|ace_gb(MO12)|VMO12
+带鼓风机的单相电动机|ace_gb(VMO1M3M)|VMO1M3M
+单相交流电动机|ace_gb(VMO1M9)|VMO1M9
+串联式单相交流电动机|ace_gb(VMO1M10)|VMO1M10
+单相同步交流电动机|ace_gb(VMO1M16)|VMO1M16
+**M1501
+D3W
+GB: 三相电动机
+三相电动机|ace_gb(mo13)|VMO13
+三相电动机 (四线)|ace_gb(mo14)|VMO14
+带鼓风机的三相电动机|ace_gb(VMO1M2)|VMO1M2
+带串励换向的三相异步电动机|ace_gb(VMO1M3)|VMO1M3
+三相异步绕线转子电动机|ace_gb(VMO1M4)|VMO1M4
+三相异步星形连接定子转子自动起动器|ace_gb(VMO1M5)|VMO1M5
+三相异步电动机 - 六极|ace_gb(VMO1M11)|VMO1M11
+三相同步交流电动机|ace_gb(VMO1M17)|VMO1M17
+**M1502
+D3W
+GB: 直流电动机
+直流电动机|ace_gb(VMO1M6)|VMO1M6
+带永磁体的直流电动机|ace_gb(VMO1M13)|VMO1M13
+直流电动机 - 永磁体串联|ace_gb(VMO1M14)|VMO1M14
+直流电动机 - 永磁体分级|ace_gb(VMO1M15)|VMO1M15
+直流电动机 - 串励|ace_gb(VMO1M7)|VMO1M7
+直流电动机 - 他励|ace_gb(VMO1M8)|VMO1M8
+直流电动机 - 自励|ace_gb(VMO1M12)|VMO1M12
+**M1503
+D3W
+GB: 发电机
+直流发电机|ace_gb(VPW1G9)|VPW1G9
+带复励的直流发电机|ace_gb(VPW1G10)|VPW1G10
+带永磁体的三相同步发电机|ace_gb(VPW1G6)|VPW1G6
+三相同步发电机 1|ace_gb(VPW1G7)|VPW1G7
+三相同步发电机 2|ace_gb(VPW1G8)|VPW1G8
+**M1504
+D3W
+GB: 电动机起动器
+电动机起动器|ace_gb(MS1)|VMS1
+带单极常开触点的电动机起动器 (电力用)|ace_gb(MS21p)|VMS21P
+带双极常开触点的电动机起动器 (电力用)|ace_gb(VMS2NA10F)|$C=wd_2unit VMS21P
+带三极常开触点的电动机起动器 (电力用)|ace_gb(ms213)|$C=wd_3unit VMS21P
+带单极常闭触点的电动机起动器 (电力用)|ace_gb(MS22p)|VMS22P
+带双极常闭触点的电动机起动器 (电力用)|ace_gb(VMS2NC12F)|$C=wd_2unit VMS22P
+带三极常闭触点的电动机起动器 (电力用)|ace_gb(ms223)|$C=wd_3unit VMS22P
+带常开触点的多极电动机起动器|ace_gb(MS21)|VMS21
+带常闭触点的多极电动机起动器|ace_gb(MS22)|VMS22
+**M16
+D3W
+GB: 熔断器、变压器和电抗器
+熔断器|ace_gb(FU1_MENU)|$S=M161
+熔断器开关|ace_gb(FU1FS_MENU)|$S=M162
+变压器|ace_gb(trafo)|$S=M163
+电抗器 - 常规|ace_gb(RT1)|VRT1
+电抗器 - 铁芯|ace_gb(RT1IC)|VRT1IC
+电抗器 - 三相线|ace_gb(RT1P3)|$C=wd_3unit VRT1IC
+具有磁芯气隙的感应器|ace_gb(VRT1L3)|VRT1L3
+变磁磁芯的感应器|ace_gb(VRT1L4)|VRT1L4
+具有磁芯气隙的三相感应器|ace_gb(VRT2L3)|$C=wd_3unit VRT1L3
+**M161
+D5W
+GB: 熔断器
+熔断器|ace_gb(FU1)|VFU1
+双极熔断器|ace_gb(FU1p2)|$C=wd_2unit VFU1
+三极熔断器|ace_gb(FU1p3)|$C=wd_3unit VFU1
+带辅助常开触点的熔断器|ace_gb(FU21)|VFU21
+带辅助常闭触点的熔断器|ace_gb(FU22)|VFU22
+吸附器|ace_gb(FU1ST)|VFU1ST
+带警报触点|ace_gb(FU1AC)|VFU1AC
+带单独的警报触点|ace_gb(FU1SAC)|VFU1SAC
+单极带电侧|ace_gb(FU1LS)|VFU1LS
+双极带电侧|ace_gb(FU1LSp2)|$C=wd_2unit VFU1LS
+三极带电侧|ace_gb(FU1LSp3)|$C=wd_3unit VFU1LS
+单相熔断器|ace_gb(VFU1F11)|VFU1F11
+双相熔断器|ace_gb(VFU2F11)|$C=wd_2unit VFU1F11
+三相熔断器|ace_gb(VFU3F11)|$C=wd_3unit VFU1F11
+带白炽灯指示的熔断器|ace_gb(VFU1F15)|VFU1F15
+带 LED 指示的熔断器|ace_gb(VFU1F16)|VFU1F16
+中性链接 - 闭合|ace_gb(FU1NLC)|VFU1NLC
+中性链接 - 断开|ace_gb(FU1NLO)|VFU1NLO
+**M162
+D2W
+GB: 熔断器开关
+单极|ace_gb(FU1FS)|VFU1FS
+单极辅项|ace_gb(FU21FS)|VFU2FS
+双极|ace_gb(FU1FSp2)|$C=wd_2unit VFU1FS
+三极|ace_gb(FU1FSp3)|$C=wd_3unit VFU1FS
+**M163
+D5W
+GB: 变压器
+单相变压器|ace_gb(xf1)|VXF1
+双相变压器|ace_gb(xf1d)|VXF1D
+双相变压器 (翻转)|ace_gb(xf1dr)|VXF1DR
+电流互感器|ace_gb(current_T)|$S=M1631
+三相变压器|ace_gb(3phase_T)|$S=M1632
+电压互感器|ace_gb(xf1pt)|VXF1PT
+单相自动|ace_gb(xf1P1AUTO)|VXF1P1AUTO
+单相自耦变压器|ace_gb(VXF1T18)|VXF1T18
+三相星形连接自耦变压器|ace_gb(VXF1T19)|VXF1T19
+具有两个线圈的电源变压器 1|ace_gb(VXF1T2)|VXF1T2
+具有两个线圈的电源变压器 2|ace_gb(VXF1T4)|VXF1T4
+具有两个线圈和一个屏罩的电源变压器|ace_gb(VXF1T3)|VXF1T3
+具有三个线圈的电源变压器|ace_gb(VXF1T6)|VXF1T6
+具有两个线圈的可调式电源变压器|ace_gb(VXF1T5)|VXF1T5
+电压互感器|ace_gb(VXF1T34)|VXF1T34
+**M1631
+D3W
+GB: 电流互感器
+电流互感器|ace_gb(xf1ct)|VXF1CT
+电流互感器 (翻转)|ace_gb(xf1ctr)|VXF1CTR
+电流互感器 2|ace_gb(VXF1T1)|VXF1T1
+带两个辅助 - 普通磁路|ace_gb(VXF1T31)|VXF1T31
+带一个多头副线圈|ace_gb(VXF1T32)|VXF1T32
+带导体指示|ace_gb(VXF1T33)|VXF1T33
+**M1632
+D6W
+GB: 三相变压器
+三相|ace_gb(xf1P3)|VXF1P3
+三相星-三角|ace_gb(xf1P3SD)|VXF1P3SD
+带插槽的主三相星-三角|ace_gb(VXF1T11)|VXF1T11
+三相星-Z 字|ace_gb(VXF1T12)|VXF1T12
+三相三角-三角|ace_gb(VXF1T13)|VXF1T13
+三相三角-星|ace_gb(VXF1T14)|VXF1T14
+具有三个线圈的三相星-星-三角|ace_gb(VXF1T15)|VXF1T15
+三相三角-三角|ace_gb(VXF1T20)|VXF1T20
+三相星-星|ace_gb(VXF1T7)|VXF1T7
+带中性线的辅三相星-星|ace_gb(VXF1T8)|VXF1T8
+带插头的主三相星-星|ace_gb(VXF1T9)|VXF1T9
+三相 Dy5|ace_gb(VXF1T21)|VXF1T21
+三相 Dd6|ace_gb(VXF1T22)|VXF1T22
+三相 Yd5|ace_gb(VXF1T23)|VXF1T23
+三相 Yy6|ace_gb(VXF1T24)|VXF1T24
+三相 Yd11|ace_gb(VXF1T25)|VXF1T25
+三相 Dy11|ace_gb(VXF1T26)|VXF1T26
+三相 Dz0|ace_gb(VXF1T27)|VXF1T27
+三相 Yz5|ace_gb(VXF1T28)|VXF1T28
+三相 Dz6|ace_gb(VXF1T29)|VXF1T29
+三相 Yz11|ace_gb(VXF1T30)|VXF1T30
+**M18
+D6W
+GB: 其他
+电铃|ace_gb(AN1B)|VAN1B
+蜂鸣器|ace_gb(AN1Z)|VAN1Z
+电喇叭|ace_gb(AN1H)|VAN1H
+报警器|ace_gb(AN1S)|VAN1S
+警笛|ace_gb(AN1W)|VAN1W
+电子元件|ace_gb(s_tronic)|$S=M28
+电缆标记|ace_gb(w01tick)|$S=M30
+插座|ace_gb(s_cnrdup)|$S=M29
+接地|ace_gb(gnd2)|HGND2
+功能性接地|ace_gb(vgnd3)|HGND3
+保护性接地|ace_gb(vgnd4)|HGND4
+保护性等电位接线|ace_gb(vgnd5)|HGND5
+等电位接线|ace_gb(gnd1)|HGND1
+屏蔽 (非智能化)|ace_gb(s_shld1_tick)|$S=M41
+用户自定义回路|ace_gb(s_usr_ck)|$S=M19
+普通外壳|ace_gb(s_box)|$S=M20
+独立交互参考符号|ace_gb(sa_refs)|$S=M40
+仅导线箭头参考|ace_gb(s_a_ref)|$S=M26
+电池|ace_gb(BA1)|VBA1
+电池 (翻转)|ace_gb(BA1R)|VBA1R
+单相电源|ace_gb(PS1_1PH)|VPW1_1PH
+三相电源|ace_gb(PS1_3PH)|VPW1_3PH
+接头符号|ace_gb(splice_horizontal)|$S=M48
+报警|ace_gb(annunc)|$S=M49
+**M19
+D6W
+GB: 保存的用户自定义回路
+**M2
+D5W
+GB: 延时继电器
+吸合时 - 延时线圈|ace_gb(TD1N)|VTD1N
+释放时 - 延时线圈|ace_gb(TD1F)|VTD1F
+吸合/释放延时|ace_gb(TCR1OOD)|VCR1OOD
+3 夹延时继电器 - 通电|ace_gb(VTD1K25)|VTD1K25
+3 夹延时继电器 - 断电|ace_gb(VTD1K27)|VTD1K27
+3 夹延时继电器 - 通电/断电|ace_gb(VTD1K29)|VTD1K29
+延迟继电器|ace_gb(VTD1K5)|VTD1K5
+吸合时 - 延时常开触点 (延时闭合)|ace_gb(TD21n)|VTD21N
+吸合时 - 延时常闭触点 (延时断开)|ace_gb(TD22n)|VTD22N
+释放时 - 延时常开触点 (瞬时闭合/延时断开)|ace_gb(TD21f)|VTD21F
+释放时 - 延时常闭触点 (瞬时断开/延时闭合)|ace_gb(TD22f)|VTD22F
+常开触点 (瞬时)|ace_gb(TD21i)|VTD21I
+常闭触点 (瞬时)|ace_gb(TD22i)|VTD22I
+常开触点 (瞬时 - 延时闭合)|ace_gb(TD21i)|VTD21IF
+常闭触点 (瞬时 - 延时闭合)|ace_gb(TD22i)|VTD22IF
+延时吸合/释放的常开触点|ace_gb(TD21DOO)|VTD21DOO
+延时吸合/释放的常闭触点|ace_gb(TD22DOO)|VTD22DOO
+吸合/释放时延时的转换触点|ace_gb(TD23F)|VTD23F
+吸合/释放时延时的转换触点|ace_gb(TD23FR)|VTD23FR
+吸合/释放时延时的转换触点|ace_gb(TD23N)|VTD23N
+吸合/释放时延时的转换触点|ace_gb(TD23NR)|VTD23NR
+**M20
+D3W
+GB: 普通的装置外壳
+四端子|ace_gb(dv1tfL)|VDV1TFL
+三端子|ace_gb(dv1tc)|VDV1TC
+三端子|ace_gb(dv1tb)|VDV1TB
+两端子|ace_gb(dv1t6)|VDV1T6
+四端子|ace_gb(dv1tf)|VDV1TF
+三端子|ace_gb(dv1te)|VDV1TE
+三端子|ace_gb(dv1t7)|VDV1T7
+符号编译器|ace_gb(shblkbox)|$C=_.AESYMBUILDER 
+**M21
+D5W
+GB: 连接器 - 线号更改
+插头/插座|ace_gb(c01pj)|VCN1PJ
+插头向上或向左|ace_gb(c01p_)|VC01P_
+插座向下或向右|ace_gb(c01_j)|VC01_J
+多极插头/插座|ace_gb(c02pj)|VCN2PJ
+多极插头向上或向左|ace_gb(c02p_)|VC02P_
+多极插座向下或向右|ace_gb(c02_j)|VC02_J
+插座/插头|ace_gb(c01jp)|VCN1JP
+插头向下或向右|ace_gb(c01_p)|VC01_P
+插座向上或向左|ace_gb(c01j_)|VC01J_
+多极插座/插头|ace_gb(c02jp)|VCN2JP
+多极插头向下或向右|ace_gb(c02_p)|VC02_P
+多极插座向上或向左|ace_gb(c02j_)|VC02J_
+构建参数|ace_gb(paraconn)|$C=wd_p2p_connector_dlg_wnum_chg 
+**M212
+D3W
+GB: 标准指示灯
+红灯|ace_gb(LT1R)|VLT1R
+绿灯|ace_gb(LT1G)|VLT1G
+橙色灯|ace_gb(LT1A)|VLT1A
+黄灯|ace_gb(lt1y)|VLT1Y
+蓝灯|ace_gb(LT1B)|VLT1B
+白灯|ace_gb(LT1W)|VLT1W
+无色灯|ace_gb(LT1C)|VLT1C
+**M22
+D5W
+GB: 连接器 - 无线号更改
+插头/插座|ace_gb(c01pj)|VC01PJ
+插头/插座 (常用引脚号)|ace_gb(c01pj1)|VC01PJ1
+插头向上或向左|ace_gb(c01p_)|VC01P_
+插座向下或向右|ace_gb(c01_j)|VC01_J
+多极插头/插座|ace_gb(c02pj)|VC02PJ
+多极插头/插座 (常用引脚号)|ace_gb(c02pj1)|VC02PJ1
+多极插头向上或向左|ace_gb(c02p_)|VC02P_
+多极插座向下或向右|ace_gb(c02_j)|VC02_J
+插座/插头|ace_gb(c01jp)|VC01JP
+插座/插头 (常用引脚号)|ace_gb(c01jp1)|VC01JP1
+插头向下或向右|ace_gb(c01_p)|VC01_P
+插座向上或向左|ace_gb(c01j_)|VC01J_
+多极插座/插头|ace_gb(c02jp)|VC02JP
+多极插座/插头 (常用引脚号)|ace_gb(c02jp1)|VC02JP1
+多极插头向下或向右|ace_gb(c02_p)|VC02_P
+多极插座向上或向左|ace_gb(c02j_)|VC02J_
+构建参数|ace_gb(paraconn)|$C=wd_p2p_connector_dlg_wnum_nochg 
+**M222
+D3W
+GB: 变压器指示灯
+闪烁指示灯 - 带变压器的灯泡|ace_gb(VLT1H10)|VLT1H10
+由内置变压器供电的指示灯|ace_gb(VLT1H23A)|VLT1H23A
+红色|ace_gb(LT1TR)|VLT1RT
+绿色|ace_gb(LT1TG)|VLT1GT
+橙色|ace_gb(LT1TA)|VLT1AT
+黄色|ace_gb(LT1TY)|VLT1YT
+蓝色|ace_gb(LT1TB)|VLT1BT
+白色|ace_gb(LT1TW)|VLT1WT
+无色|ace_gb(LT1TC)|VLT1CT
+**M232
+D3W
+GB: 按钮测试指示灯
+红色 按下测试|ace_gb(lt1rp)|VLT1RP
+绿色 按下测试|ace_gb(lt1gp)|VLT1GP
+橙色 按下测试|ace_gb(lt1ap)|VLT1AP
+黄色 按下测试|ace_gb(lt1yp)|VLT1YP
+蓝色 按下测试|ace_gb(lt1bp)|VLT1BP
+白色 按下测试|ace_gb(lt1wp)|VLT1WP
+无色 按下测试|ace_gb(lt1cp)|VLT1CP
+**M24
+D3W
+GB: 螺线管
+标准电磁阀|ace_gb(SV1)|VSV1
+带连接的标准电磁阀|ace_gb(svc1)|vsvc1
+电磁阀打开 - 关闭|ace_gb(VSV1Y1)|VSV1Y1
+电磁阀打开 - 按照螺线管情况关闭|ace_gb(VSV1Y1A)|VSV1Y1A
+磁力制动器|ace_gb(VSV1Y3)|VSV1Y3
+电磁制动器|ace_gb(VSV1Y4)|VSV1Y4
+带辅助常开触点的电磁阀|ace_gb(2plusNO)|VSV21
+带辅助常闭触点的电磁阀|ace_gb(2plusNC)|VSV22
+**M242
+D5W
+GB: LED
+闪烁 LED|ace_gb(VLT1H13)|VLT1H13
+LED 指示灯|ace_gb(VLT1H25)|VLT1H25
+红色|ace_gb(LT1LR)|VLT1RL
+红色 180|ace_gb(LT1LRR)|VLT1RLR
+绿色|ace_gb(LT1LG)|VLT1GL
+绿色 180|ace_gb(LT1LGR)|VLT1GLR
+橙色|ace_gb(LT1LA)|VLT1AL
+橙色 180|ace_gb(LT1LAR)|VLT1ALR
+黄色|ace_gb(LT1LY)|VLT1YL
+黄色 180|ace_gb(LT1LYR)|VLT1YLR
+蓝色|ace_gb(LT1LB)|VLT1BL
+蓝色 180|ace_gb(LT1LBR)|VLT1BLR
+白色|ace_gb(LT1LW)|VLT1WL
+白色 180|ace_gb(LT1LWR)|VLT1WLR
+无色|ace_gb(LT1LC)|VLT1CL
+无色 180|ace_gb(LT1LCR)|VLT1CLR
+**M25
+D6W
+GB: 仪表和传感器
+电压表|ace_gb(VM1)|VVM1
+电流表|ace_gb(AM1)|VAM1
+功率因数表|ace_gb(IN1PFM)|VIN1PFM
+相位表|ace_gb(IN1PHM)|VIN1PHM
+频率表|ace_gb(IN1FRM)|VIN1FRM
+温度表|ace_gb(IN1THM)|VIN1THM
+转速表|ace_gb(IN1TAC)|VIN1TAC
+计时表|ace_gb(IN1HRM)|VIN1HRM
+安时表|ace_gb(IN1AHM)|VIN1AHM
+记录瓦特计|ace_gb(VIN1P17)|VIN1P17
+无功功率表|ace_gb(VIN1P21)|VIN1P21
+同步指示器|ace_gb(VIN1P11)|VIN1P11
+热电耦|ace_gb(tc1l)|VTC1L
+热电耦|ace_gb(tc1r)|VTC1R
+带有端子板的热电耦|ace_gb(tc1ltb)|VTC1LTB
+带有端子板的热电耦|ace_gb(tc1rtb)|VTC1RTB
+有功功率指示器|ace_gb(VIN1P19)|VIN1P19
+温度表/高温计|ace_gb(VIN1P25)|VIN1P25
+时钟|ace_gb(VIN1P29)|VIN1P29
+每分钟关闭一次的常开时钟|ace_gb(VIN1P33)|VIN1P33
+差动伏特计|ace_gb(VVM1P7)|VVM1P7
+蓄电池|ace_gb(VPW1G4)|VPW1G4
+压力/电流转换器|ace_gb(VIN1B10)|VIN1B10
+单相交流-直流转换器|ace_gb(VIN1G1)|VIN1G1
+转速发电机|ace_gb(VIN1B11)|VIN1B11
+转速发电机 - 脉冲式|ace_gb(VIN1B12)|VIN1B12
+转速发电机 - 光学型|ace_gb(VIN1B13)|VIN1B13
+**M252
+D3W
+GB: 灯标 - 闪烁
+红色|ace_gb(LT1BFR)|VBE1RFL
+绿色|ace_gb(LT1BFG)|VBE1GFL
+橙色|ace_gb(LT1BFA)|VBE1AFL
+黄色|ace_gb(LT1BFY)|VBE1YFL
+蓝色|ace_gb(LT1BFB)|VBE1BFL
+白色|ace_gb(LT1BFW)|VBE1WFL
+无色|ace_gb(LT1BFC)|VBE1CFL
+**M26
+D3W
+GB: 导线箭头 - 仅供参考
+流出 - 向左|ace_gb(sha1x1)|HA1X1
+流出 - 向上|ace_gb(sha1x2)|HA1X2
+流出 - 向右|ace_gb(sha1x3)|HA1X3
+流出 - 向下|ace_gb(sha1x4)|HA1X4
+流入 - 向左|ace_gb(sha1x1y)|HA1X1Y
+流入 - 向上|ace_gb(sha1x2y)|HA1X2Y
+流入 - 向右|ace_gb(sha1x3y)|HA1X3Y
+流入 - 向下|ace_gb(sha1x4y)|HA1X4Y
+**M262
+D3W
+GB: 灯标 - 旋转
+红色|ace_gb(LT1BRR)|VBE1RRT
+绿色|ace_gb(LT1BRG)|VBE1GRT
+橙色|ace_gb(LT1BRA)|VBE1ART
+黄色|ace_gb(LT1BRY)|VBE1YRT
+蓝色|ace_gb(LT1BRB)|VBE1BRT
+白色|ace_gb(LT1BRW)|VBE1WRT
+无色|ace_gb(LT1BRC)|VBE1CRT
+**M27
+D4W
+GB: PLC I/O
+PLC I/O 模块|ace_gb(s_io1)|$C=PLC 
+PLC I/O 安装单元|ace_gb(PLCIO_fix)|$S=M33
+输入，第一点，1 条导线|ace_gb(plcioi1tv)|PLCIOI1TV
+输入，第一点，2 条导线|ace_gb(plcioi2tv)|PLCIOI2TV
+输出，第一点，1 条导线|ace_gb(plcioo1tv)|PLCIOO1TV
+输出，第一点，2 条导线|ace_gb(plcioo2tv)|PLCIOO2TV
+输入，多极辅元件，1 条导线|ace_gb(plcioi1v)|PLCIOI1V
+输入，多极辅元件，2 条导线|ace_gb(plcioi2v)|PLCIOI2V
+输出，多极辅元件，1 条导线|ace_gb(plcioo1v)|PLCIOO1V
+输出，多极辅元件，2 条导线|ace_gb(plcioo2v)|PLCIOO2V
+**M28
+D6W
+GB: 电子元件
+固定电阻器|ace_gb(re1b)|VRE1B
+可变电阻器|ace_gb(vr1b)|VVR1b
+可变电阻器|ace_gb(vr1br)|VVR1bR
+可变电阻器 2|ace_gb(VVR1R2)|VVR1R2
+光敏电阻器|ace_gb(RE1LDR)|VRE1LDR
+加热器元件|ace_gb(re1ht)|VRE1HT
+多极元件|ace_gb(re2ht)|VRE2HT
+RC 网络|ace_gb(RE1RCN)|VRE1RCN
+变阻器|ace_gb(VVR1R3O)|VVR1R3
+具有可动触点的电阻器|ace_gb(VVR1R4)|VVR1R4
+具有可动触点和隔离档位的电阻器|ace_gb(VVR1R5)|VVR1R5
+旁路|ace_gb(VVR1R7)|VVR1R7
+带碳盘的可变电阻器|ace_gb(VVR1R8)|VVR1R8
+二极管|ace_gb(di1)|VDI1
+二极管 180|ace_gb(di1R)|VDI1R
+光敏二极管|ace_gb(VDI1B4)|VDI1B4
+光敏二极管 2|ace_gb(VDI1B5)|VDI1B5
+稳压二极管 - 单向|ace_gb(VDI1V2)|VDI1V2
+双向触发二极管|ace_gb(VDI1V3)|VDI1V3
+桥式整流器|ace_gb(DI1BR)|VDI1BR
+三相桥式整流器|ace_gb(VDI1V5)|VDI1V5
+SCR|ace_gb(VDI1V4)|VDI1V4
+电容器|ace_gb(CA1)|VCA1
+电解|ace_gb(CA1EL)|VCA1EL
+电解 180|ace_gb(CA1ELR)|VCA1ELR
+穿心式电容器|ace_gb(VCA1C2)|VCA1C2
+光敏 PNP 晶体管|ace_gb(VDV1B6)|VDV1B6
+**M29
+D1W
+GB: 电源插座
+交流插座|ace_gb(s_cnrdup2)|VCN1RDUP
+直流插座|ace_gb(s_cnrsgl)|VCN1RSGL
+**M3
+D6W
+GB: 按钮
+瞬动型常开按钮|ace_gb(PB11)|VPB11
+瞬动型常闭按钮|ace_gb(PB12)|VPB12
+闭锁式常开按钮|ace_gb(PB11L)|VPB11L
+闭锁式常闭按钮|ace_gb(PB12L)|VPB12L
+瞬动型蘑菇头常开触点|ace_gb(PB11M)|VPB11M
+瞬动型蘑菇头常闭触点|ace_gb(PB12M)|VPB12M
+闭锁式蘑菇头常开触点|ace_gb(pb11ml)|VPB11ML
+闭锁式蘑菇头常闭触点|ace_gb(PB12Ml)|VPB12ML
+带旋转销装置的蘑菇头常开触点|ace_gb(PB11MR)|VPB11MTL
+带旋转销装置的蘑菇头常闭触点|ace_gb(PB12MR)|VPB12MTL
+闭锁式蘑菇头常开触点，拉至脱离|ace_gb(VPB1S80)|VPB11S80
+闭锁式蘑菇头常闭触点，拉至脱离|ace_gb(VPB1S80C)|VPB12S80
+闭锁式蘑菇头常开触点，键操作|ace_gb(VPB1S82)|VPB11S82
+闭锁式蘑菇头常闭触点，键操作|ace_gb(VPB1S82C)|VPB12S82
+凹式常开按钮|ace_gb(vpb11re)|VPB11RE
+凹式常闭按钮|ace_gb(vpb12re)|VPB12RE
+带销凹式常开按钮|ace_gb(vpb11rel)|VPB11REL
+带销凹式常闭按钮|ace_gb(vpb12rel)|VPB12REL
+常开按钮正极闭合|ace_gb(vpb11pm)|VPB11PM
+常闭按钮正极断开|ace_gb(vpb12pb)|VPB12PB
+多极常开触点|ace_gb(2plusNO)|VSW21
+多极常闭触点|ace_gb(2plusNC)|VSW22
+照明按钮|ace_gb(VPB1S75)|$S=M391
+**M30
+D3W
+GB: 电缆标记
+电缆标记|ace_gb(w01)|VW01
+多极辅标记|ace_gb(w02)|VW02
+附加的标记|ace_gb(shw02dum)|HT0_CABLE
+带有屏蔽的电缆标记|ace_gb(shw01_1)|$S=M42
+双绞线|ace_gb(tw_pair)|$C=wd_2unit VT0_TW
+绞线标记|ace_gb(tw_marker)|$C=ace_twist_marker 
+多芯已连接|ace_gb(mult_cbl_m)|$C=wd_cblshld_bld 5
+多芯已连接 (全部多芯)|ace_gb(mult_cbl_m2)|$C=wd_cblshld_bld_2 5
+**M31
+D4W
+GB: 限定符号
+操作装置|ace_gb(qmenu1)|$S=M3101
+力或运动的线性方向|ace_gb(qmenu2)|$S=M3102
+力或运动的旋转方向|ace_gb(qmenu3)|$S=M3103
+传播流或信号|ace_gb(qmenu4)|$S=M3104
+能量流|ace_gb(qmenu5)|$S=M3105
+效应|ace_gb(qmenu6)|$S=M3106
+辐射|ace_gb(qmenu7)|$S=M3107
+故障|ace_gb(qmenu8)|$S=M3108
+线圈|ace_gb(qmenu9)|$S=M3109
+机械控制|ace_gb(qmenu10)|$S=M3110
+机械控制，闭锁装置|ace_gb(qmenu11)|$S=M3111
+机械控制，耦合|ace_gb(qmenu12)|$S=M3112
+**M3101
+D6W
+GB: 操作装置
+正向动作|ace_gb(q070109)|$C=(c:wd_inu_iecqs "Q070109")
+手动命令常规标记|ace_gb(Q021301)|$C=(c:wd_inu_iecqs "Q021301")
+访问受保护的手动命令|ace_gb(Q021302)|$C=(c:wd_inu_iecqs "Q021302")
+按钮命令|ace_gb(Q021305)|$C=(c:wd_inu_iecqs "Q021305")
+应急命令|ace_gb(Q021308)|$C=(c:wd_inu_iecqs "Q021308")
+旋转命令|ace_gb(Q021304)|$C=(c:wd_inu_iecqs "Q021304")
+键命令|ace_gb(Q021313)|$C=(c:wd_inu_iecqs "Q021313")
+脚踏促动命令|ace_gb(Q021310)|$C=(c:wd_inu_iecqs "Q021310")
+杠杆命令|ace_gb(Q021311)|$C=(c:wd_inu_iecqs "Q021311")
+曲柄命令|ace_gb(Q021214)|$C=(c:wd_inu_iecqs "Q021214")
+固定手动命令|ace_gb(Q021312)|$C=(c:wd_inu_iecqs "Q021312")
+轮手动命令|ace_gb(Q021309)|$C=(c:wd_inu_iecqs "Q021309")
+液位促动|ace_gb(Q021401)|$C=(c:wd_inu_iecqs "Q021401")
+事件数促动|ace_gb(Q021402)|$C=(c:wd_inu_iecqs "Q021402")
+液流促动|ace_gb(Q021403)|$C=(c:wd_inu_iecqs "Q021403")
+气流促动|ace_gb(Q021404)|$C=(c:wd_inu_iecqs "Q021404")
+自动命令|ace_gb(Q021326)|$C=(c:wd_inu_iecqs "Q021326")
+定时命令|ace_gb(Q021327)|$C=(c:wd_inu_iecqs "Q021327")
+滚动命令|ace_gb(Q021315)|$C=(c:wd_inu_iecqs "Q021315")
+凸轮命令|ace_gb(Q021316)|$C=(c:wd_inu_iecqs "Q021316")
+凸轮轮廓|ace_gb(Q021317)|$C=(c:wd_inu_iecqs "Q021317")
+开关档位功能|ace_gb(q070106)|$C=(c:wd_inu_iecqs "Q070106")
+开关档位 (翻转)|ace_gb(q070106r)|$C=(c:wd_inu_iecqs "Q070106r")
+隔离开关分离器|ace_gb(q070103)|$C=(c:wd_inu_iecqs "Q070103")
+切换隔离开关分离器|ace_gb(q070104)|$C=(c:wd_inu_iecqs "Q070104")
+断路器功能|ace_gb(q070102)|$C=(c:wd_inu_iecqs "Q070102")
+电流接触器功能|ace_gb(q070101)|$C=(c:wd_inu_iecqs "Q070101")
+自动跳闸功能|ace_gb(q070105)|$C=(c:wd_inu_iecqs "Q070105")
+自动复位 (弹性复位)|ace_gb(q070107)|$C=(c:wd_inu_iecqs "Q070107")
+非自动复位 (保持)|ace_gb(q070108)|$C=(c:wd_inu_iecqs "Q070108")
+**M3102
+D2W
+GB: 力或运动的线性方向
+单向力或移动|ace_gb(Q020401)|$C=(c:wd_inu_iecqs "Q020401")
+双向力或移动|ace_gb(Q020402)|$C=(c:wd_inu_iecqs "Q020402")
+平移|ace_gb(Q101101)|$C=(c:wd_inu_iecqs "Q101101")
+**M3103
+D2W
+GB: 力或运动的旋转方向
+单向力或移动|ace_gb(Q020403)|$C=(c:wd_inu_iecqs "Q020403")
+双向力或移动|ace_gb(Q020404)|$C=(c:wd_inu_iecqs "Q020404")
+受限制的双向力或移动|ace_gb(Q020405)|$C=(c:wd_inu_iecqs "Q020405")
+**M3104
+D2W
+GB: 传播流或信号
+单向传播|ace_gb(Q020501)|$C=(c:wd_inu_iecqs "Q020501")
+双向同步传输传播|ace_gb(Q020502)|$C=(c:wd_inu_iecqs "Q020502")
+双向交替传输传播|ace_gb(Q020503)|$C=(c:wd_inu_iecqs "Q020503")
+信号传输|ace_gb(Q020504)|$C=(c:wd_inu_iecqs "Q020504")
+信号接收|ace_gb(Q020505)|$C=(c:wd_inu_iecqs "Q020505")
+**M3105
+D2W
+GB: 能量流
+外送能通量|ace_gb(Q020506)|$C=(c:wd_inu_iecqs "Q020506")
+内收能通量|ace_gb(Q020507)|$C=(c:wd_inu_iecqs "Q020507")
+内收和外送能通量|ace_gb(Q020508)|$C=(c:wd_inu_iecqs "Q020508")
+**M3106
+D2W
+GB: 效应
+热效应|ace_gb(Q020801)|$C=(c:wd_inu_iecqs "Q020801")
+磁效应|ace_gb(Q020802)|$C=(c:wd_inu_iecqs "Q020802")
+磁致伸缩效应|ace_gb(Q020803)|$C=(c:wd_inu_iecqs "Q020803")
+磁场效应|ace_gb(Q020804)|$C=(c:wd_inu_iecqs "Q020804")
+**M3107
+D2W
+GB: 辐射
+非电离相干电磁辐射|ace_gb(Q020901)|$C=(c:wd_inu_iecqs "Q020901")
+非电离相干辐射|ace_gb(Q020902)|$C=(c:wd_inu_iecqs "Q020902")
+电离辐射|ace_gb(Q020903)|$C=(c:wd_inu_iecqs "Q020903")
+**M3108
+D1W
+GB: 故障
+指示故障推测位置|ace_gb(Q021701)|$C=(c:wd_inu_iecqs "Q021701")
+绝缘不良故障|ace_gb(Q021702)|$C=(c:wd_inu_iecqs "Q021702")
+**M3109
+D5W
+GB: 线圈
+双相线圈|ace_gb(Q060201)|$C=(c:wd_inu_iecqs "Q060201")
+三相部分 V 形线圈|ace_gb(Q060202)|$C=(c:wd_inu_iecqs "Q060202")
+可接地四相线圈|ace_gb(Q060203)|$C=(c:wd_inu_iecqs "Q060203")
+三相 T 形线圈|ace_gb(Q060204)|$C=(c:wd_inu_iecqs "Q060204")
+三相三角形线圈|ace_gb(Q060205)|$C=(c:wd_inu_iecqs "Q060205")
+三相开放式三角形线圈|ace_gb(Q060206)|$C=(c:wd_inu_iecqs "Q060206")
+三相星形线圈|ace_gb(Q060207)|$C=(c:wd_inu_iecqs "Q060207")
+可接地三相星形线圈|ace_gb(Q060208)|$C=(c:wd_inu_iecqs "Q060208")
+三相 Z 字形线圈|ace_gb(Q060209)|$C=(c:wd_inu_iecqs "Q060209")
+Esaphase 双三角形线圈|ace_gb(Q060210)|$C=(c:wd_inu_iecqs "Q060210")
+Esaphase 多边形线圈|ace_gb(Q060211)|$C=(c:wd_inu_iecqs "Q060211")
+Esaphase 星形线圈|ace_gb(Q060212)|$C=(c:wd_inu_iecqs "Q060212")
+可接地 Esaphase 双 Z 字形线圈|ace_gb(Q060213)|$C=(c:wd_inu_iecqs "Q060213")
+直流指示|ace_gb(Q020201)|$C=(c:wd_inu_iecqs "Q020201")
+直流指示|ace_gb(Q020203)|$C=(c:wd_inu_iecqs "Q020203")
+指示采用备用元件调整的电流|ace_gb(Q020212)|$C=(c:wd_inu_iecqs "Q020212")
+交流指示|ace_gb(Q020204)|$C=(c:wd_inu_iecqs "Q020204")
+**M3110
+D2W
+GB: 机械控制
+自动复位|ace_gb(Q021207)|$C=(c:wd_inu_iecqs "Q021207")
+非自动复位止动销|ace_gb(Q021208)|$C=(c:wd_inu_iecqs "Q021208")
+中性档位的止动销|ace_gb(Q021209)|$C=(c:wd_inu_iecqs "Q021209")
+接合的止动销|ace_gb(Q021210)|$C=(c:wd_inu_iecqs "Q021210")
+两个装置之间互锁|ace_gb(Q021211)|$C=(c:wd_inu_iecqs "Q021211")
+**M3111
+D2W
+GB: 机械控制，闭锁装置
+接合的销装置|ace_gb(Q021212)|$C=(c:wd_inu_iecqs "Q021212")
+中性档位的销装置|ace_gb(Q021213)|$C=(c:wd_inu_iecqs "Q021213")
+双向销装置|ace_gb(Q1020603)|$C=(c:wd_inu_iecqs "Q1020603")
+带手动拔销的销装置|ace_gb(Q1020604)|$C=(c:wd_inu_iecqs "Q1020604")
+带键的双向销装置|ace_gb(Q1029603)|$C=(c:wd_inu_iecqs "Q1029603")
+**M3112
+D2W
+GB: 机械控制，耦合
+离合器接头|ace_gb(Q021216)|$C=(c:wd_inu_iecqs "Q021216")
+隔离的接头|ace_gb(Q021217)|$C=(c:wd_inu_iecqs "Q021217")
+接合的接头|ace_gb(Q021218)|$C=(c:wd_inu_iecqs "Q021218")
+接合的接头|ace_gb(Q021219)|$C=(c:wd_inu_iecqs "Q021219")
+齿轮接头|ace_gb(Q021223)|$C=(c:wd_inu_iecqs "Q021223")
+**M32
+D4W
+GB: 导线内导线标签
+红色|ace_gb(WIRELABEL_red)|$C=wd_repeat VT0_LGENERIC COLOR=(c:wd_msg,"COLOR001",nil,"RED")
+黑色|ace_gb(WIRELABEL_blk)|$C=wd_repeat VT0_LGENERIC COLOR=(c:wd_msg,"COLOR002",nil,"BLK")
+白色|ace_gb(WIRELABEL_wht)|$C=wd_repeat VT0_LGENERIC COLOR=(c:wd_msg,"COLOR003",nil,"WHT")
+绿色|ace_gb(WIRELABEL_green)|$C=wd_repeat VT0_LGENERIC COLOR=(c:wd_msg,"COLOR004",nil,"GRN")
+蓝色|ace_gb(WIRELABEL_blue)|$C=wd_repeat VT0_LGENERIC COLOR=(c:wd_msg,"COLOR005",nil,"BLU")
+黄色|ace_gb(WIRELABEL_yellow)|$C=wd_repeat VT0_LGENERIC COLOR=(c:wd_msg,"COLOR006",nil,"YEL")
+橙色|ace_gb(WIRELABEL_orange)|$C=wd_repeat VT0_LGENERIC COLOR=(c:wd_msg,"COLOR007",nil,"ORG")
+灰色|ace_gb(WIRELABEL_gray)|$C=wd_repeat VT0_LGENERIC COLOR=(c:wd_msg,"COLOR008",nil,"GRY")
+淡蓝色|ace_gb(WIRELABEL_ltblue)|$C=wd_repeat VT0_LGENERIC COLOR=(c:wd_msg,"COLOR009",nil,"LT-BLU")
+绿色/黄色|ace_gb(WIRELABEL_gy)|$C=wd_repeat VT0_LGENERIC COLOR=(c:wd_msg,"COLOR010",nil,"GRN/YEL")
+自定义类型|ace_gb(WIRELABEL_type)|$C=wd_inlinlab_oem "VT0_LGENERIC"
+复制线号|ace_gb(WIRELABEL_num)|$C=wd_repeat HT0_WGENERIC
+**M33
+D3W
+GB: PLC 安装单元
+AB 1761 MicroLogix (间距为 8)|ace_gb(ab1761-80m)|$S=M37
+AB 1761 MicroLogix (间距为 12)|ace_gb(ab1761-120m)|$S=M38
+AB 1761 MicroLogix (间距为 16)|ace_gb(ab1761-160m)|$S=M39
+自动调整引脚间距 DL105 (间距为 8)|ace_gb(dl105-80m)|$S=M34
+自动调整引脚间距 DL105 (间距为 12)|ace_gb(dl105-120m)|$S=M35
+自动调整引脚间距 DL105 (间距为 16)|ace_gb(dl105-160m)|$S=M36
+**M34
+D3W
+GB: 自动调整引脚间距 DL105 (横档间距=8)
+F1-130AA 10in/8out 115AC-DC/115AC|ace_gb(F1-130AA-8)|PLCIO80MF1-130AA
+F1-130AD 10in/8out 115AC-DC/24DC|ace_gb(F1-130AD-8)|PLCIO80MF1-130AD
+F1-130AR 10in/8 relay out 115AC-DC|ace_gb(F1-130AR-8)|PLCIO80MF1-130AR
+F1-130DA 10in s-s/8 out 24DC/115AC|ace_gb(F1-130DA-8)|PLCIO80MF1-130DA
+F1-130DD 10in s-s/8 out 24DC/115AC|ace_gb(F1-130DD-8)|PLCIO80MF1-130DD
+F1-130DR 10in s-s/8 relay out 24DC|ace_gb(F1-130DR-8)|PLCIO80MF1-130DR
+F1-130DD-D 10in s-s/8 out 24DC/24DC|ace_gb(F1-130DD-D-8)|PLCIO80MF1-130DD-D
+F1-130DR-D 10in s-s/8 relay out 24DC|ace_gb(F1-130DR-D-8)|PLCIO80MF1-130DR-D
+**M35
+D3W
+GB: 自动调整引脚间距 DL105 (横档间距=12)
+F1-130AA 10in/8out 115AC-DC/115AC|ace_gb(F1-130AA-12)|PLCIO120MF1-130AA
+F1-130AD 10in/8out 115AC-DC/24DC|ace_gb(F1-130AD-12)|PLCIO120MF1-130AD
+F1-130AR 10in/8 relay out 115AC-DC|ace_gb(F1-130AR-12)|PLCIO120MF1-130AR
+F1-130DA 10in s-s/8 out 24DC/115AC|ace_gb(F1-130DA-12)|PLCIO120MF1-130DA
+F1-130DD 10in s-s/8 out 24DC/115AC|ace_gb(F1-130DD-12)|PLCIO120MF1-130DD
+F1-130DR 10in s-s/8 relay out 24DC|ace_gb(F1-130DR-12)|PLCIO120MF1-130DR
+F1-130DD-D 10in s-s/8 out 24DC/24DC|ace_gb(F1-130DD-D-12)|PLCIO120MF1-130DD-D
+F1-130DR-D 10in s-s/8 relay out 24DC|ace_gb(F1-130DR-D-12)|PLCIO120MF1-130DR-D
+**M36
+D3W
+GB: 自动调整引脚间距 DL105 (横档间距=16)
+F1-130AA 10in/8out 115AC-DC/115AC|ace_gb(F1-130AA-16)|PLCIO160MF1-130AA
+F1-130AD 10in/8out 115AC-DC/24DC|ace_gb(F1-130AD-16)|PLCIO160MF1-130AD
+F1-130AR 10in/8 relay out 115AC-DC|ace_gb(F1-130AR-16)|PLCIO160MF1-130AR
+F1-130DA 10in s-s/8 out 24DC/115AC|ace_gb(F1-130DA-16)|PLCIO160MF1-130DA
+F1-130DD 10in s-s/8 out 24DC/115AC|ace_gb(F1-130DD-16)|PLCIO160MF1-130DD
+F1-130DR 10in s-s/8 relay out 24DC|ace_gb(F1-130DR-16)|PLCIO160MF1-130DR
+F1-130DD-D 10in s-s/8 out 24DC/24DC|ace_gb(F1-130DD-D-16)|PLCIO160MF1-130DD-D
+F1-130DR-D 10in s-s/8 relay out 24DC|ace_gb(F1-130DR-D-16)|PLCIO160MF1-130DR-D
+**M37
+D3W
+GB: AB 1761 MicroLogix (横档间距=8)
+L16-AWA 10in/6out AC-DC/115AC-DC|ace_gb(L16-AWA-8)|PLCIO80M1761-L16AWA
+L16-BBB 10in/6out 24DC/115AC-DC|ace_gb(L16-BBB-8)|PLCIO80M1761-L16BBB
+L16-BWA 10in/6out 24DC/115AC-DC|ace_gb(L16-BWA-8)|PLCIO80M1761-L16BWA
+L16-BWB 10in/6out 24DC/115AC-DC|ace_gb(L16-BWB-8)|PLCIO80M1761-L16BWB
+L32-AAA 20in/12out 115AC/115-230AC|ace_gb(L32-AAA-8)|PLCIO80M1761-L32AAA
+L32-AWA 20in/12out AC-DC/115AC-DC|ace_gb(L32-AWA-8)|PLCIO80M1761-L32AWA
+L32-BWA 20in/12out 24DC/AC-DC|ace_gb(L32-BWA-8)|PLCIO80M1761-L32BWA
+L24-AWA 12in/12out AC-DC/115AC-DC|ace_gb(L24-AWA-8)|PLCIO80M1761-L24AWA
+L24-BWA 12in/12out 24DC/115AC-DC|ace_gb(L24-BWA-8)|PLCIO80M1761-L24BWA
+**M38
+D3W
+GB: AB 1761 MicroLogix (横档间距=12)
+L16-AWA 10in/6out AC-DC/115AC-DC|ace_gb(L16-AWA-12)|PLCIO120M1761-L16AWA
+L16-BBB 10in/6out 24DC/115AC-DC|ace_gb(L16-BBB-12)|PLCIO120M1761-L16BBB
+L16-BWA 10in/6out 24DC/115AC-DC|ace_gb(L16-BWA-12)|PLCIO120M1761-L16BWA
+L16-BWB 10in/6out 24DC/115AC-DC|ace_gb(L16-BWB-12)|PLCIO120M1761-L16BWB
+L32-AAA 20in/12out 115AC/115-230AC|ace_gb(L32-AAA-12)|PLCIO120M1761-L32AAA
+L32-AWA 20in/12out AC-DC/115AC-DC|ace_gb(L32-AWA-12)|PLCIO120M1761-L32AWA
+L32-BWA 20in/12out 24DC/AC-DC|ace_gb(L32-BWA-12)|PLCIO120M1761-L32BWA
+L24-AWA 12in/12out AC-DC/115AC-DC|ace_gb(L24-AWA-12)|PLCIO120M1761-L24AWA
+L24-BWA 12in/12out 24DC/115AC-DC|ace_gb(L24-BWA-12)|PLCIO120M1761-L24BWA
+**M39
+D3W
+GB: AB 1761 MicroLogix (横档间距=16)
+L16-AWA 10in/6out AC-DC/115AC-DC|ace_gb(L16-AWA-16)|PLCIO160M1761-L16AWA
+L16-BBB 10in/6out 24DC/115AC-DC|ace_gb(L16-BBB-16)|PLCIO160M1761-L16BBB
+L16-BWA 10in/6out 24DC/115AC-DC|ace_gb(L16-BWA-16)|PLCIO160M1761-L16BWA
+L16-BWB 10in/6out 24DC/115AC-DC|ace_gb(L16-BWB-16)|PLCIO160M1761-L16BWB
+L32-AAA 20in/12out 115AC/115-230AC|ace_gb(L32-AAA-16)|PLCIO160M1761-L32AAA
+L32-AWA 20in/12out AC-DC/115AC-DC|ace_gb(L32-AWA-16)|PLCIO160M1761-L32AWA
+L32-BWA 20in/12out 24DC/AC-DC|ace_gb(L32-BWA-16)|PLCIO160M1761-L32BWA
+L24-AWA 12in/12out AC-DC/115AC-DC|ace_gb(L24-AWA-16)|PLCIO160M1761-L24AWA
+L24-BWA 12in/12out 24DC/115AC-DC|ace_gb(L24-BWA-16)|PLCIO160M1761-L24BWA
+**M391
+D4W
+GB: 照明按钮
+按钮常开触点|ace_gb(VPB11S75)|VPB11S75
+按钮常闭触点|ace_gb(VPB1S75C)|VPB12S75
+具有常开触点但无自动复位的按钮开关|ace_gb(VPB1S76)|VPB11S76
+具有常闭触点但无自动复位的按钮开关|ace_gb(VPB1S76C)|VPB12S76
+多极红灯|ace_gb(PBL2R)|VPB2R
+多极绿灯|ace_gb(PBL2G)|VPB2G
+多极琥珀色灯|ace_gb(PBL2A)|VPB2A
+多极黄灯|ace_gb(PBL2Y)|VPB2Y
+多极蓝灯|ace_gb(PBL2B)|VPB2B
+多极白灯|ace_gb(PBL2W)|VPB2W
+多极无色灯|ace_gb(PBL2C)|VPB2C
+**M4
+D3W
+GB: 指示灯
+标准指示灯|ace_gb(LT1R_menu)|$S=M212
+变压器指示灯|ace_gb(LT1TR_menu)|$S=M222
+按钮测试指示灯|ace_gb(lt1rp_menu)|$S=M232
+LED|ace_gb(LT1LR_menu)|$S=M242
+灯标 - 闪烁|ace_gb(LT1BFR_menu)|$S=M252
+灯标 - 旋转|ace_gb(LT1BRR_menu)|$S=M262
+闪烁装置|ace_gb(VLT1H21)|VLT1H21
+氖灯|ace_gb(VLT1H22)|VLT1H22
+白炽灯|ace_gb(VLT1H24)|VLT1H24
+**M40
+D3W
+GB: 独立交互参考符号
+源矩形|ace_gb(ha2s1_r)|HA2S1_REF
+源六边形|ace_gb(ha3s1_r)|HA3S1_REF
+源椭圆|ace_gb(ha5s1_r)|HA5S1_REF
+目标矩形|ace_gb(ha2d1_r)|HA2D1_REF
+目标六边形|ace_gb(ha3d1_r)|HA3D1_REF
+目标椭圆|ace_gb(ha5d1_r)|HA5D1_REF
+**M41
+D3W
+GB: 屏蔽符号
+带有屏蔽的电缆|ace_gb(s_shld1)|$C=wd_shld_bld 1
+带有屏蔽的双绞线|ace_gb(s_shld2)|$C=wd_shld_bld 2
+屏蔽|ace_gb(s_shld3)|$C=wd_shld_bld 3
+向后捆绑的屏蔽|ace_gb(s_shld4)|$C=wd_shld_bld 4
+双绞线|ace_gb(tw_pair)|$C=wd_2unit VT0_TW
+带有屏蔽的电缆标记|ace_gb(shw01_1)|$S=M42
+**M42
+D3W
+GB: 带有屏蔽的电缆标记
+带有屏蔽的电缆|ace_gb(shw01_1_item)|$C=wd_cblshld_bld 1
+带有屏蔽的双绞线|ace_gb(shw01_2)|$C=wd_cblshld_bld 2
+屏蔽|ace_gb(shw01_3)|$C=wd_cblshld_bld 3
+向后捆绑的屏蔽|ace_gb(shw01_4)|$C=wd_cblshld_bld 4
+添加两芯屏蔽|ace_gb(shld_add_double)|$C=ace_shld_add_double 
+带有屏蔽的电缆 (全部两芯)|ace_gb(shw02_1)|$C=wd_cblshld_bld_2 1
+带有屏蔽的双绞线 (全部两芯)|ace_gb(shw02_2)|$C=wd_cblshld_bld_2 2
+向后捆绑的屏蔽 (全部多芯)|ace_gb(shw02_4)|$C=wd_cblshld_bld_2 4
+屏蔽 (全部多芯)|ace_gb(shw02_3)|$C=wd_cblshld_bld_2 3
+**M43
+D5W
+GB: 连接器引脚 - 备用/单面
+插头向右或向上|ace_gb(shc01p_)|HCN1P_
+插座向左或向下|ace_gb(shc01_j)|HCN1_J
+插头向右或向上 (组合接头/引脚)|ace_gb(shc01p_1)|HCN1P_1
+插座向左或向下 (组合)|ace_gb(shc01_j1)|HCN1_J1
+多极插头向右或向上|ace_gb(shc02p_)|HCN2P_
+多极插座向左或向下|ace_gb(shc02_j)|HCN2_J
+多极插头向右或向上 (组合)|ace_gb(shc02p_1)|HCN2P_1
+多极插座向左或向下 (组合)|ace_gb(shc02_j1)|HCN2_J1
+插座向右或向上|ace_gb(shc01j_)|HCN1J_
+插头向左或向下|ace_gb(shc01_p)|HCN1_P
+插座向右或向上 (组合)|ace_gb(shc01j_1)|HCN1J_1
+插头向左或向下 (组合)|ace_gb(shc01_p1)|HCN1_P1
+多极插座向右或向上|ace_gb(shc02j_)|HCN2J_
+多极插头向左或向下|ace_gb(shc02_p)|HCN2_P
+多极插座向右或向上 (组合)|ace_gb(shc02j_1)|HCN2J_1
+多极插头向左或向下 (组合)|ace_gb(shc02_p1)|HCN2_P1
+**M45
+D2W
+GB: 电源分配模块
+三端子，10 个单位间距|ace_gb(pdb-8)|VDB1308
+三端子，15 个单位间距|ace_gb(pdb-12)|VDB1312
+三端子，20 个单位间距|ace_gb(pdb-16)|VDB1316
+**M46
+D6W
+GB: 带熔断器的隔离开关
+熔断器式开关|ace_gb(DS11F)|VDS11F
+多极熔断器式开关|ace_gb(DS21F)|VDS21F
+双极熔断器式开关|ace_gb(DS1Fp2)|$C=wd_2unit VDS11F
+三极熔断器式开关|ace_gb(DS1Fp3)|$C=wd_3unit VDS11F
+辅助常开触点|ace_gb(FU21)|VDS21AUX
+辅助常闭触点|ace_gb(FU22)|VDS22AUX
+单极熔断器式负荷开关|ace_gb(DS11OL)|VDS1OL
+双极熔断器式负荷开关|ace_gb(DS1OLP2)|$C=wd_2unit VDS1OL
+三极熔断器式负荷开关|ace_gb(DS1OLP3)|$C=wd_3unit VDS1OL
+多极熔断器式负荷开关|ace_gb(DS21OL)|VDS2OL
+带熔断器的单相隔离开关|ace_gb(VDS1Q81)|VDS11Q81
+带熔断器的双相隔离开关|ace_gb(VDS2Q81)|$C=wd_2unit VDS11Q81
+带熔断器的三相隔离开关|ace_gb(VDS3Q81)|$C=wd_3unit VDS11Q81
+带熔断器的单相操作开关/隔离开关|ace_gb(VDS1Q85)|VDS11Q85
+带熔断器的双相操作开关/隔离开关|ace_gb(VDS2Q85)|$C=wd_2unit VDS11Q85
+带熔断器的三相操作开关/隔离开关|ace_gb(VDS3Q85)|$C=wd_3unit VDS11Q85
+**M48
+D1W
+GB: 接头符号
+接头|ace_gb(splice_vertical)|VSP1001
+**M49
+D2W
+GB: 报警
+喇叭|ace_gb(VAN1B7)|VAN1B7
+喇叭 - 麦克风|ace_gb(VAN1B8)|VAN1B8
+麦克风|ace_gb(VAN1B9)|VAN1B9
+**M6
+D6W
+GB: 选择开关
+双档位保持，常开触点|ace_gb(ss112)|VSS112
+双档位保持，常闭触点|ace_gb(SS122)|VSS122
+从左复位的双档位常开触点|ace_gb(ss112L)|Vss112L
+从左复位的双档位常闭触点|ace_gb(ss122L)|Vss122L
+从右复位的双档位常开触点|ace_gb(ss112R)|Vss112R
+从右复位的双档位常闭触点|ace_gb(ss122R)|Vss122R
+带指示灯的双档位开关常开触点|ace_gb(VSW1S77)|VSW11S77
+带指示灯的双档位开关常闭触点|ace_gb(VSW1S77C)|VSW12S77
+带手动拔销的常开触点|ace_gb(VSS1NA21F)|VSS2121F
+有自锁功能的常开触点|ace_gb(VSS1NA22F)|VSS2122F
+常开定时触点|ace_gb(VSS1NA7F)|VSS217F
+常开延时触点|ace_gb(VSS1NA8F)|VSS218F
+带手动拔销的常闭触点|ace_gb(VSS1NC21F)|VSS2221F
+有自锁功能的常闭触点|ace_gb(VSS1NC22F)|VSS2222F
+常闭定时触点|ace_gb(VSS1NC8F)|VSS227F
+常闭延时触点|ace_gb(VSS1NC9F)|VSS228F
+不带销，常开触点|ace_gb(ss11NL)|VSS11NL
+不带销，常闭触点|ace_gb(ss12NL)|VSS12NL
+双极常开触点|ace_gb(VSS2NA13F)|$C=wd_2unit VSS21
+多极常开触点|ace_gb(2plusNO)|VSS21
+多极常闭触点|ace_gb(2plusNC)|VSS22
+三档位选择开关|ace_gb(3_posittion)|$S=M62
+四档位选择开关|ace_gb(4_posittion)|$S=M63
+**M62
+D6W
+GB: 三档位选择开关
+三档位保持，常开触点|ace_gb(ss113)|VSS113
+三档位保持，常闭触点|ace_gb(ss123)|VSS123
+从左复位的三档位常开触点|ace_gb(ss113L)|Vss113L
+从左复位的三档位常闭触点|ace_gb(ss123L)|Vss123L
+从右复位的三档位常开触点|ace_gb(ss113R)|Vss113R
+从右复位的三档位常闭触点|ace_gb(ss123R)|Vss123R
+从两个方向复位的三档位常开触点|ace_gb(ss113B)|Vss113B
+从两个方向复位的三档位常闭触点|ace_gb(ss123B)|Vss123B
+三档位常开触点，中性 0|ace_gb(VSS1S31)|VSS11S31
+三档位常闭触点，中性 0|ace_gb(VSS1S31C)|VSS12S31
+三档位常开触点，中性 1|ace_gb(VSS1S32)|VSS11S32
+三档位常闭触点，中性 1|ace_gb(VSS1S32C)|VSS12S32
+三档位常开触点，中性 2|ace_gb(VSS1S33)|VSS11S33
+三档位常闭触点，中性 2|ace_gb(VSS1S33C)|VSS12S33
+三档位常开触点，键操作，中性 0|ace_gb(VSS1S40)|VSS11S40
+三档位常闭触点，键操作，中性 0|ace_gb(VSS1S40C)|VSS12S40
+三档位常开触点，键操作，中性 1|ace_gb(VSS1S41)|VSS11S41
+三档位常闭触点，键操作，中性 1|ace_gb(VSS1S41C)|VSS12S41
+三档位常开触点，键操作，中性 2|ace_gb(VSS1S42)|VSS11S42
+三档位常闭触点，键操作，中性 2|ace_gb(VSS1S42C)|VSS12S42
+稳定三档位常开触点，键操作，中性 0|ace_gb(VSS1S43)|VSS11S43
+稳定三档位常闭触点，键操作，中性 0|ace_gb(VSS1S43C)|VSS12S43
+稳定三档位常开触点，键操作，中性 1|ace_gb(VSS1S44)|VSS11S44
+稳定三档位常闭触点，键操作，中性 1|ace_gb(VSS1S44C)|VSS12S44
+稳定三档位常开触点，键操作，中性 2|ace_gb(VSS1S45)|VSS11S45
+稳定三档位常闭触点，键操作，中性 2|ace_gb(VSS1S45C)|VSS12S45
+三极常开触点|ace_gb(VSS2NA14F)|$C=wd_3unit VSS21
+**M63
+D4W
+GB: 四档位选择开关
+四档位保持，常开触点|ace_gb(ss114)|VSS114
+四档位保持，常闭触点|ace_gb(ss124)|VSS124
+四位钥匙操作开关，常开|ace_gb(VSS1S46)|VSS11S46
+四位钥匙操作开关，常闭|ace_gb(VSS1S46C)|VSS12S46
+四位钥匙操作开关(自锁)，常开|ace_gb(VSS1S49)|VSS11S49
+四位钥匙操作开关(自锁)，常闭|ace_gb(VSS1S49C)|VSS12S49
+四位钥匙操作开关(自锁)，常开， 双向旋转|ace_gb(VSS1S50)|VSS11S50
+四位钥匙操作开关(自锁)，常闭，双向旋转|ace_gb(VSS1S50C)|VSS12S50
+四位钥匙操作开关(自锁)，常开，顺时针旋转|ace_gb(VSS1S51)|VSS11S51
+四位钥匙操作开关(自锁)，常闭，顺时针旋转|ace_gb(VSS1S51C)|VSS12S51
+**M7
+D2W
+GB: 接近开关
+电感开关|ace_gb(PX1i_menu)|$S=M711
+电容开关|ace_gb(PX1C_menu)|$S=M712
+电磁开关|ace_gb(PX1M_menu)|$S=M713
+光电开关|ace_gb(PX11PE3_menu)|$S=M714
+声控开关|ace_gb(PX1U_menu)|$S=M715
+触摸式开关|ace_gb(PX1TS_menu)|$S=M716
+**M711
+D4W
+GB: 电感开关
+铁质感应|ace_gb(PX1i)|VPX1i
+铁接近时动作的接近开关，常开|ace_gb(PX11I)|VPX11I
+铁接近时动作的接近开关，常闭|ace_gb(PX12I)|VPX12I
+常开，3 线|ace_gb(PX11IN3)|VPX11IN3
+常开，3 线 180°|ace_gb(PX11IN3R)|VPX11IN3R
+常闭，3 线|ace_gb(PX12IN3)|VPX12IN3
+常闭，3 线 180°|ace_gb(PX12IN3R)|VPX12IN3R
+常开，3 线，带连接器|ace_gb(PX11IN3C)|VPX11IN3C
+常开，3 线，带连接器 180°|ace_gb(PX11IN3RC)|VPX11IN3RC
+常闭，3 线，带连接器|ace_gb(PX12IN3C)|VPX12IN3C
+常闭，3 线，带连接器 180°|ace_gb(PX12IN3RC)|VPX12IN3RC
+多极常开触点|ace_gb(2plusNO)|VSW21
+多极常闭触点|ace_gb(2plusNC)|VSW22
+**M712
+D4W
+GB: 电容开关
+电容|ace_gb(PX1C)|VPX1C
+电容开关，常开触点|ace_gb(PX11C)|VPX11C
+电容开关，常闭触点|ace_gb(PX12C)|VPX12C
+常开，3 线|ace_gb(PX11IC3)|VPX11C3
+常开，3 线 180°|ace_gb(PX11C3R)|VPX11C3R
+常闭，3 线|ace_gb(PX12C3)|VPX12C3
+常闭，3 线 180°|ace_gb(PX12C3R)|VPX12C3R
+常开，3 线，带连接器|ace_gb(PX11C3C)|VPX11C3C
+常开，3 线，带连接器 180°|ace_gb(PX11C3RC)|VPX11C3RC
+常闭，3 线，带连接器|ace_gb(PX12C3C)|VPX12C3C
+常闭，3 线，带连接器 180°|ace_gb(PX12C3RC)|VPX12C3RC
+多极常开触点|ace_gb(2plusNO)|VSW21
+多极常闭触点|ace_gb(2plusNC)|VSW22
+**M713
+D4W
+GB: 电磁开关
+磁性|ace_gb(PX1M)|VPX1M
+磁性接近开关，常开触点|ace_gb(PX11M)|VPX11M
+磁性接近开关，常闭触点|ace_gb(PX12M)|VPX12M
+常开，3 线|ace_gb(PX11M3)|VPX11M3
+常开，3 线 180°|ace_gb(PX11M3R)|VPX11M3R
+常闭，3 线|ace_gb(PX12M3)|VPX12M3
+常闭，3 线 180°|ace_gb(PX12M3R)|VPX12M3R
+常开，3 线，带连接器|ace_gb(PX11M3C)|VPX11M3C
+常开，3 线，带连接器 180°|ace_gb(PX11M3RC)|VPX11M3RC
+常闭，3 线，带连接器|ace_gb(PX12M3C)|VPX12M3C
+常闭，3 线，带连接器 180°|ace_gb(PX12M3RC)|VPX12M3RC
+多极常开触点|ace_gb(2plusNO)|VSW21
+多极常闭触点|ace_gb(2plusNC)|VSW22
+**M714
+D1W
+GB: 光电开关
+发射器|ace_gb(PX11PE3_menu)|$S=M7141
+接收器|ace_gb(PX11PE3_menu)|$S=M7142
+发射器/接收器|ace_gb(PX11PE3_menu)|$S=M7143
+**M7141
+D4W
+GB: 光电发射器开关
+发射器 - 交流驱动|ace_gb(VPE1B14)|VPE1B14
+发射器 - 直流驱动|ace_gb(VPE1B15)|VPE1B15
+带转换触点的发射-接收器|ace_gb(VPE1B16SC)|VPE13B16SC
+发射器 - 直流驱动|ace_gb(VPE1B20)|VPE1B20
+常开，4 线|ace_gb(PX11PE4)|VPE11PE4
+常开，4 线 180°|ace_gb(PX11PE4R)|VPE11PE4R
+常闭，4 线|ace_gb(PX12PE4)|VPE12PE4
+常闭，4 线 180°|ace_gb(PX12PE4R)|VPE12PE4R
+常开，4 线，带连接器|ace_gb(PX11PE4C)|VPE11PE4C
+常开，4 线，带连接器 180°|ace_gb(PX11PE4RC)|VPE11PE4RC
+常闭，4 线，带连接器|ace_gb(PX12PE4C)|VPE12PE4C
+常闭，4 线，带连接器 180°|ace_gb(PX12PE4RC)|VPE12PE4RC
+多极常开触点|ace_gb(2plusNO)|VSW21
+多极常闭触点|ace_gb(2plusNC)|VSW22
+**M7142
+D6W
+GB: 光电接收器开关
+接收器，常开，2 线|ace_gb(PX11PE2)|VPE11PE2
+接收器，常闭，2 线|ace_gb(PX12PE2)|VPE12PE2
+接收器，常开，2 线，带连接器|ace_gb(PX11PE2C)|VPE11PE2C
+接收器，常闭，2 线，带连接器|ace_gb(PX12PE2C)|VPE12PE2C
+接收器，常开，3 线|ace_gb(PX11PE3)|VPE11PE3
+接收器，常开，3 线 180°|ace_gb(PX11PE3R)|VPE11PE3R
+接收器，常闭，3 线|ace_gb(PX12PE3)|VPE12PE3
+接收器，常闭，3 线 180°|ace_gb(PX12PE3R)|VPE12PE3R
+接收器，常开，3 线，带连接器|ace_gb(PX11PE3C)|VPE11PE3C
+接收器，常开，3 线，带连接器 180°|ace_gb(PX11PE3RC)|VPE11PE3RC
+接收器，常闭，3 线，带连接器|ace_gb(PX12PE3C)|VPE12PE3C
+接收器，常闭，3 线，带连接器 180°|ace_gb(PX12PE3RC)|VPE12PE3RC
+常开接收器 - 交流驱动|ace_gb(VPE1B14A)|VPE11B14
+常闭接收器 - 交流驱动|ace_gb(VPE1B14C)|VPE12B14
+常开接收器 - 直流驱动|ace_gb(VPE1B15A)|VPE11B15
+常闭接收器 - 直流驱动|ace_gb(VPE1B15C)|VPE12B15
+多极常开触点|ace_gb(2plusNO)|VSW21
+多极常闭触点|ace_gb(2plusNC)|VSW22
+**M7143
+D5W
+GB: 光电发射器/接收器开关
+发射-接收器，常开，直流驱动|ace_gb(VPE1B16A)|VPE11B16
+发射-接收器，常闭，直流驱动|ace_gb(VPE1B16C)|VPE12B16
+发射-接收器，常开，交流/直流驱动，2 引脚|ace_gb(VPE1B22A)|VPE11B22
+发射-接收器，常闭，交流/直流驱动，2 引脚|ace_gb(VPE1B22C)|VPE12B22
+发射-接收器，常开，交流驱动，3 引脚|ace_gb(VPE1B23A)|VPE11B23
+发射-接收器，常闭，交流驱动，3 引脚|ace_gb(VPE1B23C)|VPE12B23
+发射-接收器，常开，直流驱动，3 引脚|ace_gb(VPE1B24A)|VPE11B24
+发射-接收器，常闭，直流驱动，3 引脚|ace_gb(VPE1B24C)|VPE12B24
+发射-接收器，常开，交流驱动，4 引脚|ace_gb(VPE1B25A)|VPE11B25
+发射-接收器，常闭，交流驱动，4 引脚|ace_gb(VPE1B25C)|VPE12B25
+发射-接收器，常开，直流驱动，4 引脚|ace_gb(VPE1B26A)|VPE11B26
+发射-接收器，常闭，直流驱动，4 引脚|ace_gb(VPE1B26C)|VPE12B26
+发射-接收器，转换触点，交流驱动，5 引脚|ace_gb(VPE1B25SC)|VPE13B25SC
+发射-接收器，转换触点，直流驱动，5 引脚|ace_gb(VPE1B26SC)|VPE13B26SC
+多极常开触点|ace_gb(2plusNO)|VSW21
+多极常闭触点|ace_gb(2plusNC)|VSW22
+**M715
+D4W
+GB: 声控开关
+声控|ace_gb(PX1U)|VPX1U
+声控开关，常开触点|ace_gb(PX11U)|VPX11U
+声控开关，常闭触点|ace_gb(PX12U)|VPX12U
+常开，3 线|ace_gb(PX11U3)|VPX11U3
+常开，3 线 180°|ace_gb(PX11U3R)|VPX11U3R
+常闭，3 线|ace_gb(PX12U3)|VPX12U3
+常闭，3 线 180°|ace_gb(PX12U3R)|VPX12U3R
+常开，3 线，带连接器|ace_gb(PX11U3C)|VPX11U3C
+常开，3 线，带连接器 180°|ace_gb(PX11U3RC)|VPX11U3RC
+常闭，3 线，带连接器|ace_gb(PX12U3C)|VPX12U3C
+常闭，3 线，带连接器 180°|ace_gb(PX12U3RC)|VPX12U3RC
+多极常开触点|ace_gb(2plusNO)|VSW21
+多极常闭触点|ace_gb(2plusNC)|VSW22
+**M716
+D4W
+GB: 触摸式开关
+触摸|ace_gb(PX1TS)|VPX1TS
+触摸式接近开关，常开触点|ace_gb(PX11TS)|VPX11TS
+触摸式接近开关，常闭触点|ace_gb(PX12TS)|VPX12TS
+常开，3 线|ace_gb(PX11TS3)|VPX11TS3
+常开，3 线 180°|ace_gb(PX11TS3R)|VPX11TS3R
+常闭，3 线|ace_gb(PX12TS3)|VPX12TS3
+常闭，3 线 180°|ace_gb(PX12TS3R)|VPX12TS3R
+常开，3 线，带连接器|ace_gb(PX11TS3C)|VPX11TS3C
+常开，3 线，带连接器 180°|ace_gb(PX11TS3RC)|VPX11TS3RC
+常闭，3 线，带连接器|ace_gb(PX12TS3C)|VPX12TS3C
+常闭，3 线，带连接器 180°|ace_gb(PX12TS3RC)|VPX12TS3RC
+多极常开触点|ace_gb(2plusNO)|VSW21
+多极常闭触点|ace_gb(2plusNC)|VSW22
+**M8
+D6W
+GB: 限位开关
+限位开关，常开触点|ace_gb(LS11)|VLS11
+限位开关，常闭触点|ace_gb(LS12)|VLS12
+限位开关，滚珠常开触点|ace_gb(LS11c)|VLS11c
+限位开关，滚珠常闭触点|ace_gb(LS12c)|VLS12c
+限位开关常开触点 - 凸轮驱动|ace_gb(VLS1S13)|VLS11S13
+限位开关常闭触点 - 凸轮驱动|ace_gb(VLS1S13C)|VLS12S13
+限位开关常开触点 - 事件驱动|ace_gb(VLS1S16)|VLS11S16
+限位开关常闭触点 - 事件驱动|ace_gb(VLS1S16C)|VLS12S16
+带制动器和指示灯的双档位开关常开触点|ace_gb(VLS1S78)|VLS11S78
+带制动器和指示灯的双档位开关常闭触点|ace_gb(VLS1S78C)|VLS12S78
+双向杠杆促动式 - 常开触点|ace_gb(VLS1S84)|VLS11S84
+双向杠杆促动式 - 常闭触点|ace_gb(VLS1S84C)|VLS12S84
+四向杠杆促动式 - 常开触点|ace_gb(VLS1S85)|VLS11S85
+四向杠杆促动式 - 常闭触点|ace_gb(VLS1S85C)|VLS12S85
+双向杠杆促动式 - 带制动器的常开触点|ace_gb(VLS1S87)|VLS11S87
+双向杠杆促动式 - 带制动器的常闭触点|ace_gb(VLS1S87C)|VLS12S87
+四向杠杆促动式 - 带制动器的常开触点|ace_gb(VLS1S88)|VLS11S88
+四向杠杆促动式 - 带制动器的常闭触点|ace_gb(VLS1S88C)|VLS12S88
+多极常开触点|ace_gb(2plusNO)|VLS21
+多极常闭触点|ace_gb(2plusNC)|VLS22
+**M9
+D4W
+GB: 压力和热敏开关
+压力开关，常开触点|ace_gb(PS11)|VPS11
+压力开关，常闭触点|ace_gb(PS12)|VPS12
+热敏开关 1，常开|ace_gb(TS11)|VTS11
+热敏开关 1，常闭|ace_gb(TS12)|VTS12
+热敏开关 2，常开|ace_gb(VTS1S18)|VTS11S18
+热敏开关 2，常闭|ace_gb(VTS1S18C)|VTS12S18
+热敏开关 3，常开|ace_gb(VTS1S74)|VTS11S74
+热敏开关 3，常闭|ace_gb(VTS1S74C)|VTS12S74
+多极常开触点|ace_gb(2plusNO)|VSW21
+多极常闭触点|ace_gb(2plusNC)|VSW22
+热控开关，常开，自操作|ace_gb(TS11S59)|VTS11S59
+热控开关，常闭，自操作|ace_gb(TS12S59C)|VTS12S59C
